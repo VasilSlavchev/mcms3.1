@@ -11,6 +11,7 @@
                     <thead>
                     <th>Image</th>
                     <th>Title</th>
+                    <th>Categpoty</th>
                     <th></th>
                     <th></th>
                     </thead>
@@ -19,6 +20,7 @@
                         <tr>
                             <td><img src="{{asset($post->image)}}" alt="Post Image" width="120px" height="60px"></td>
                             <td>{{$post->title}}</td>
+                            <td><a href="{{route('categories.edit', $post->categories->id)}}">{{$post->category->name}}</a></td>
                             @if($post->trashed())
                                 <td>
                                     <form action="{{ route('restore-posts', $post->id) }}" method="POST">

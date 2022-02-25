@@ -37,6 +37,22 @@
                     <label for="image">Image</label>
                     <input type="file" class="form-control" name="image" id="image">
                 </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select name="category" id="category" class="form-control">
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}"
+                                        @if(isset($post))
+                                        @if($category->id === $post->category_id)
+                                        selected
+                                    @endif
+                                    @endif
+                                >
+                                    {{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 <div class="form-group">
                     <button class="btn btn-success" type="submit">
 						{{isset($post) ? 'Update post' : 'Create post'}}
@@ -51,7 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         flatpickr('#published_at', {
-          enaableTime:true
+          enableTime:true
         })
     </script>
 @endsection
