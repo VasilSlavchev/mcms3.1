@@ -1,100 +1,77 @@
-<!DOCTYPE html>
-<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php $__env->startSection('title'); ?>
+    Saas Blog
+<?php $__env->stopSection(); ?>
 
-        <title>Laravel</title>
+<?php $__env->startSection('header'); ?>
+    <!-- Header -->
+    <header class="header text-center text-white"
+            style="background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);">
+        <div class="container">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+                    <h1>Latest Blog Posts</h1>
+                    <p class="lead-2 opacity-90 mt-6">Read and get updated on how we progress</p>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <?php if(Route::has('login')): ?>
-                <div class="top-right links">
-                    <?php if(auth()->guard()->check()): ?>
-                        <a href="<?php echo e(url('/home')); ?>">Home</a>
-                    <?php else: ?>
-                        <a href="<?php echo e(route('login')); ?>">Login</a>
-
-                        <?php if(Route::has('register')): ?>
-                            <a href="<?php echo e(route('register')); ?>">Register</a>
-                        <?php endif; ?>
-                    <?php endif; ?>
                 </div>
-            <?php endif; ?>
+            </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+        </div>
+    </header><!-- /.header -->
+<?php $__env->stopSection(); ?>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+<?php $__env->startSection('content'); ?>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="section bg-gray">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-8 col-xl-9">
+                        <div class="row gap-y">
+
+                            <?php $__empty_1 = true; $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                <div class="col-md-6">
+                                    <div class="card border hover-shadow-6 mb-6 d-block">
+                                        <a href="<?php echo e(route('blog.show', $post->id)); ?>"><img class="card-img-top"
+                                                                                           src="<?php echo e(asset($post->image)); ?>"
+                                                                                           alt="Card image cap"></a>
+                                        <div class="p-6 text-center">
+                                            <p>
+                                                <a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">
+                                                    <?php echo e($post->category->name); ?>
+
+                                                </a>
+                                            </p>
+                                            <h5 class="mb-0">
+                                                <a class="text-dark" href="<?php echo e(route('blog.show', $post->id)); ?>">
+                                                    <?php echo e($post->title); ?>
+
+                                                </a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                                <p class="text-center">
+                                    No results found for query <strong><?php echo e(request()->query('search')); ?></strong>
+                                </p>
+                            <?php endif; ?>
+
+                        </div>
+
+                        <?php echo e($posts->appends(['search' => request()->query('search') ])->links()); ?>
+
+                    </div>
+
+                    <?php echo $__env->make('partials.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
                 </div>
             </div>
         </div>
-    </body>
-</html>
-<?php /**PATH C:\laragon\www\mcms3.1\resources\views/welcome.blade.php ENDPATH**/ ?>
+    </main>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mcms3.1\resources\views/welcome.blade.php ENDPATH**/ ?>
