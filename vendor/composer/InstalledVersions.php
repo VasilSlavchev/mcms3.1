@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'v5.8.35',
-    'version' => '5.8.35.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '5d2a2e30c14d72318e3916c964ee6b0a3dd2f65f',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -385,12 +385,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'v5.8.35',
-      'version' => '5.8.35.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '5d2a2e30c14d72318e3916c964ee6b0a3dd2f65f',
     ),
     'laravel/tinker' => 
     array (
@@ -659,8 +659,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0|2.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -1061,6 +1061,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '34a41e998c2183e22995f158c581e7b5e755ab9e',
+    ),
+    'thomaswelton/gravatarlib' => 
+    array (
+      'pretty_version' => '0.1.0',
+      'version' => '0.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8a4e829c53ca2abb51ef2e514f696938a9bdbd0c',
+    ),
+    'thomaswelton/laravel-gravatar' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bdfa24847a5602aa9273967c8b6d5e3ec6860ed1',
     ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (

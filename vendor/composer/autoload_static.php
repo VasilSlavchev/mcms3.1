@@ -44,6 +44,8 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'Thomaswelton\\Tests\\LaravelGravatar\\' => 35,
+            'Thomaswelton\\LaravelGravatar\\' => 29,
             'Tests\\' => 6,
         ),
         'S' => 
@@ -170,6 +172,14 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
+        ),
+        'Thomaswelton\\Tests\\LaravelGravatar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thomaswelton/laravel-gravatar/tests',
+        ),
+        'Thomaswelton\\LaravelGravatar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thomaswelton/laravel-gravatar/src',
         ),
         'Tests\\' => 
         array (
@@ -398,6 +408,13 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
     );
 
     public static $prefixesPsr0 = array (
+        't' => 
+        array (
+            'thomaswelton\\GravatarLib\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/thomaswelton/gravatarlib',
+            ),
+        ),
         'P' => 
         array (
             'Parsedown' => 
@@ -428,6 +445,7 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostsController.php',
         'App\\Http\\Controllers\\TagsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TagsController.php',
+        'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -437,6 +455,7 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCategoriesCount' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCategoriesCount.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\VerifyIsAdmin' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyIsAdmin.php',
         'App\\Http\\Requests\\Categories\\CreateCategoryRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Categories/CreateCategoryRequest.php',
         'App\\Http\\Requests\\Categories\\UpdateCategoriesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Categories/UpdateCategoriesRequest.php',
         'App\\Http\\Requests\\Posts\\CreatePostsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Posts/CreatePostsRequest.php',
@@ -4187,6 +4206,9 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
+        'Thomaswelton\\LaravelGravatar\\Facades\\Gravatar' => __DIR__ . '/..' . '/thomaswelton/laravel-gravatar/src/Facades/Gravatar.php',
+        'Thomaswelton\\LaravelGravatar\\Gravatar' => __DIR__ . '/..' . '/thomaswelton/laravel-gravatar/src/Gravatar.php',
+        'Thomaswelton\\LaravelGravatar\\LaravelGravatarServiceProvider' => __DIR__ . '/..' . '/thomaswelton/laravel-gravatar/src/LaravelGravatarServiceProvider.php',
         'TijsVerkoyen\\CssToInlineStyles\\CssToInlineStyles' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/CssToInlineStyles.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Processor.php',
@@ -4314,6 +4336,7 @@ class ComposerStaticInit8381e13912a22e34c4ae201afd5b50f3
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
+        'thomaswelton\\GravatarLib\\Gravatar' => __DIR__ . '/..' . '/thomaswelton/gravatarlib/thomaswelton/GravatarLib/Gravatar.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

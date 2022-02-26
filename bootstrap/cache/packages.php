@@ -34,4 +34,15 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'thomaswelton/laravel-gravatar' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Thomaswelton\\LaravelGravatar\\LaravelGravatarServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Gravatar' => 'Thomaswelton\\LaravelGravatar\\Facades\\Gravatar',
+    ),
+  ),
 );
