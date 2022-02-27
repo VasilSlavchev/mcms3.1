@@ -31,7 +31,7 @@
 
 
                     <div class="col-md-8 col-xl-9">
-                         <div class="row gap-y">
+                        <div class="row gap-y">
 
                             @forelse($posts as $post)
                                 <div class="col-md-6">

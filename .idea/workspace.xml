@@ -2,482 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eea0f0eb-424b-4040-9f66-561d307170ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/PostsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/page.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/page.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/page.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/style.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/css/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/et-line.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/et-line.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/et-line.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/et-line.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/app/badge-apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/app/badge-google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/app/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/app/photoswipe/default-skin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/app/photoswipe/default-skin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/app/photoswipe/preloader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/placeholder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/avatar/thethemeio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/bg/pattern-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/planet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/rocket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/icon/rocket2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/bootstrap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/theadmin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/thedocs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/theguide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/thejobs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/thesaas-wp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/thesaas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/theshots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/logo/thesplash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/og-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/partner/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/portfolio/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/block-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/blocks-and-elements.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-finance-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-listing-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-listing-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-marketing-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-marketing-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-saas-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-saas-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-saas-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-saas-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-software-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-software-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/demo-software-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/dribbble-9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/feature-tablet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-color.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-gradient.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-parallax.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-particle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-slider.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-typing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/header-video.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/icons-etline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/icons-fontawesome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/icons-themify.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/ipad-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/ipad-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/laptop-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/laptop-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/mac-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/phone-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/phone-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/phone-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/phone-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/shot-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/shot-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/shot-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/preview/shot-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/shop/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/thumb/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/vector/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/video/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/img/video/1.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/js/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/js/page.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/js/page.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/js/page.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/PHPMailerAutoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/class.phpmailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/class.phpmaileroauth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/class.phpmaileroauthgoogle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/class.pop3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/class.smtp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/PHPMailer/get_oauth_token.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/assets/php/sendmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/career.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/content.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/counter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/cover.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/cta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/download.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/explore.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/feature-text.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/feature.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/modal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/offcanvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/partner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/popup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/portfolio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/pricing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/process.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/subscribe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/team.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/testimonial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/block/video.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/classic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/grid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/post-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/post-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/blog/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/finance-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/listing-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/listing-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/marketing-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/marketing-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/saas-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/saas-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/saas-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/saas-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/software-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/software-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/demo/software-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/articles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-basic-get-started.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-basic-plugin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-basic-update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-basic-what.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-expert-get-started.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-expert-gulp-tasks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-expert-plugin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-expert-remove-vendor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-expert-update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-expert-what.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-start-directory-structure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-start-get-started.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/docs/kb-start-html-structure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/about-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/about-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/about-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/career-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/career.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/coming-soon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/contact-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/contact-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/contact-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/error-404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/how-it-works.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/portfolio-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/portfolio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/pricing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/service-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/service-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/terms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/user-login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/user-recover.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/page/user-register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/shop/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/shop/checkout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/shop/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/shop/item.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/shop/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/accordion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/alert.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/badge.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/button.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/color.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/constellation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/content.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/countdown.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/countup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/dropdown.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/granim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/icon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/image.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/lightbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/misc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/modal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/offcanvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/overlay.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/popup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/pricing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/process.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/progress.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/scroll.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/section.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/shuffle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/slider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/social.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/tab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/topbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/typing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/typography.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/utility.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/defaultTemplatre/uikit/video.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/page.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/et-line.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/et-line.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/et-line.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/et-line.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/logo-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/page.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/storage/posts/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/storage/posts/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/storage/posts/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/storage/posts/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/blog/category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/blog/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/blog.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/semantic-ui.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-default.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/posts/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/posts/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/posts/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/posts/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/1e/f8/1ef8e0cdee352cae2aa33079ea421ea2118baaa6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/43/61/4361f8be70f96b243da43ac61c819ee421aa1165" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/a3/96/a396f0c0472a3a6b6bb3be997d838f3b719d0157" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/b3/03/b30317a70a738dfb4fd7f6c46b8593e205553020" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/xD3SNOD7c96tpeL3ikOhziGJGzSggS9IPd8rLUOP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/30de247a8c0949d8f9106d2af59f1ce3f88f33cc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/551cd4d4130609025e9e527daa91ada7a7dbcf1d.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/75c04bbc73812c7c686f880c71de4a811c3a5ff3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/d513730dbe159e0866378339974c1248a26233a8.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/storage/posts/dpcky8KjPFVtA8DiUV6BReFKjnFH0lewvgHRQRZI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/storage/posts/dq3QMNTpLzo5hcw4Uqgv9aesCQf7uBAw4JRlVibg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/posts/dpcky8KjPFVtA8DiUV6BReFKjnFH0lewvgHRQRZI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/public/posts/dq3QMNTpLzo5hcw4Uqgv9aesCQf7uBAw4JRlVibg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/30/92/30927e60971603b77c115bbc32f9acddbaa1f6fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/b2/e6/b2e6f9b0c7cea042cd2da81e3bb3bae33a4fb7dd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/3KUcfEenF7RX6FQwFCdI3eoW9sovhTMLorDVEpcG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/51ff29022d00739c34368d3d05212a7df4a252bc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2022-02-27.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCategoriesCount.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCategoriesCount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TagsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TagsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyIsAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyIsAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Categories/CreateCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Categories/CreateCategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Categories/UpdateCategoriesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Categories/UpdateCategoriesRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Posts/CreatePostsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Posts/CreatePostsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Tags/CreateTagRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Tags/CreateTagRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Tags/UpdateTagsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Tags/UpdateTagsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_24_121230_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_02_24_121230_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_24_121339_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_02_24_121339_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/logo-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo-dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/logo-light.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo-light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/posts/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/posts/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/posts/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/posts/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/tag.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/categories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/errors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/DZPZaDoFZzrlLXzOWuDX6LBmI2TZGU897FwuVltW" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Zbk6ATwLXZ2DJaw4fG5zp2AsGQbCBRcWiMqDE1Xp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/posts/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/posts/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/posts/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/posts/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/43/61/4361f8be70f96b243da43ac61c819ee421aa1165" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/43/61/4361f8be70f96b243da43ac61c819ee421aa1165" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/b3/03/b30317a70a738dfb4fd7f6c46b8593e205553020" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/b3/03/b30317a70a738dfb4fd7f6c46b8593e205553020" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/xD3SNOD7c96tpeL3ikOhziGJGzSggS9IPd8rLUOP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/551cd4d4130609025e9e527daa91ada7a7dbcf1d.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/551cd4d4130609025e9e527daa91ada7a7dbcf1d.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/897bb4cf8e6f33a11e4be06a3e6a7742becf940c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/897bb4cf8e6f33a11e4be06a3e6a7742becf940c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/ac63ef8e9e406454c6925df98ab68614a286e806.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/ac63ef8e9e406454c6925df98ab68614a286e806.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/bdeefb83521a886723bedb186c33d1a595fd1877.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/bdeefb83521a886723bedb186c33d1a595fd1877.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/d247bf006ea12175d3ca484c0e5924111c45fb51.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d247bf006ea12175d3ca484c0e5924111c45fb51.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/d513730dbe159e0866378339974c1248a26233a8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d513730dbe159e0866378339974c1248a26233a8.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2022-02-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2022-02-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -636,7 +217,8 @@
       <workItem from="1645703788558" duration="1435000" />
       <workItem from="1645706062852" duration="24363000" />
       <workItem from="1645774893792" duration="35447000" />
-      <workItem from="1645858929123" duration="49628000" />
+      <workItem from="1645858929123" duration="50140000" />
+      <workItem from="1645942039068" duration="12581000" />
     </task>
     <servers />
   </component>

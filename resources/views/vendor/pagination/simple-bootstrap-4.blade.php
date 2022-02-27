@@ -1,4 +1,3 @@
-
 @if ($paginator->hasPages())
     <nav class="flexbox mt-30">
         @if ($paginator->onFirstPage())

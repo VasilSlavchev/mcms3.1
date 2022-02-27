@@ -1,5 +1,6 @@
 <?php $__env->startSection('title'); ?>
-    mCMS 3.1
+    Category <?php echo e($category->name); ?>
+
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('header'); ?>
@@ -10,7 +11,7 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
 
-                    <h1>Latest Blog Posts</h1>
+                    <h1><?php echo e($category->name); ?></h1>
                     <p class="lead-2 opacity-90 mt-6">Read and get updated on how we progress</p>
 
                 </div>
@@ -73,4 +74,4 @@
     </main>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mcms3.1\resources\views/welcome.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mcms3.1\resources\views/blog/category.blade.php ENDPATH**/ ?>

@@ -1,25 +1,37 @@
 <?php $__env->startSection('content'); ?>
     <div class="d-flex justify-content-end mb-2">
-        <a href="<?php echo e(route('posts.create')); ?>" class="btn btn-success">Add post</a>
+        <a href="<?php echo e(route('posts.create')); ?>" class="btn btn-success">Add Post</a>
     </div>
+
     <div class="card card-default">
         <div class="card-header">Posts</div>
+
         <div class="card-body">
-            <?php if($posts->count()>0): ?>
+            <?php if($posts->count() > 0): ?>
                 <table class="table">
                     <thead>
                     <th>Image</th>
                     <th>Title</th>
-                    <th>Categpoty</th>
+                    <th>Category</th>
                     <th></th>
                     <th></th>
                     </thead>
                     <tbody>
                     <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
-                            <td><img src="<?php echo e(asset($post->image)); ?>" alt="Post Image" width="120px" height="60px"></td>
-                            <td><?php echo e($post->title); ?></td>
-                            <td><a href="<?php echo e(route('categories.edit', $post->categories->id)); ?>"><?php echo e($post->category->name); ?></a></td>
+                            <td>
+                                <img src="<?php echo e(asset($post->image)); ?>" width="120px" height="60px" alt="">
+                            </td>
+                            <td>
+                                <?php echo e($post->title); ?>
+
+                            </td>
+                            <td>
+                                <a href="<?php echo e(route('categories.edit', $post->category->id)); ?>">
+                                    <?php echo e($post->category->name); ?>
+
+                                </a>
+                            </td>
                             <?php if($post->trashed()): ?>
                                 <td>
                                     <form action="<?php echo e(route('restore-posts', $post->id)); ?>" method="POST">
@@ -29,7 +41,8 @@
                                     </form>
                                 </td>
                             <?php else: ?>
-                                <td><a href="<?php echo e(route('posts.edit', $post->id)); ?>" class="btn btn-info btn-sm">Edit</a>
+                                <td>
+                                    <a href="<?php echo e(route('posts.edit', $post->id)); ?>" class="btn btn-info btn-sm">Edit</a>
                                 </td>
                             <?php endif; ?>
                             <td>
@@ -37,7 +50,7 @@
                                     <?php echo csrf_field(); ?>
                                     <?php echo method_field('DELETE'); ?>
                                     <button type="submit" class="btn btn-danger btn-sm">
-                                        <?php echo e($post->trashed () ? 'Delete' : 'Trash'); ?>
+                                        <?php echo e($post->trashed() ? 'Delete': 'Trash'); ?>
 
                                     </button>
                                 </form>
@@ -47,7 +60,7 @@
                     </tbody>
                 </table>
             <?php else: ?>
-                <h3 class="text-center">No posts yet</h3>
+                <h3 class="text-center">No Posts Yet</h3>
             <?php endif; ?>
         </div>
     </div>

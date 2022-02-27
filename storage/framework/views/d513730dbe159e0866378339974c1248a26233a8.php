@@ -1,4 +1,3 @@
-
 <?php if($paginator->hasPages()): ?>
     <nav class="flexbox mt-30">
         <?php if($paginator->onFirstPage()): ?>
