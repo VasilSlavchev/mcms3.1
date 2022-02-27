@@ -55,7 +55,7 @@ class Post extends Model
 
     public function scopePublished($query)
     {
-        return $query->where('published_at', '<=', now());
+        return $query->where('published_at', '<=', now()) ->orderBy('created_at', 'desc');
     }
 
     public function scopeSearched($query)

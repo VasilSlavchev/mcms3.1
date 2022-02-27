@@ -72,7 +72,7 @@
 
             <div class="col-6 col-lg-3 text-right order-lg-last">
                 <div class="social">
-                    <a class="social-facebook" href="https://www.facebook.com/marsislav515"><i class="fa fa-facebook"></i></a>
+                    <a class="social-facebook" href="https://www.facebook.com/marsislav515" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
                     <a class="social-instagram" href="#/"><i class="fa fa-instagram"></i></a>
                     <a class="social-dribbble" href="#"><i class="fa fa-dribbble"></i></a>

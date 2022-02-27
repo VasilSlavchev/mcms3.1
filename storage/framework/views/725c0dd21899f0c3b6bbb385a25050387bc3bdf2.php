@@ -1,5 +1,6 @@
 <?php $__env->startSection('title'); ?>
-    mCMS 3.1
+    Tag <?php echo e($tag->name); ?>
+
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('header'); ?>
@@ -10,8 +11,8 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
 
-                    <h1>Welcome to mCMS 3.1</h1>
-                    <p class="lead-2 opacity-90 mt-6">Simply. Powerful.</p>
+                    <h1><?php echo e($tag->name); ?></h1>
+                    <p class="lead-2 opacity-90 mt-6">Read and get updated on how we progress</p>
 
                 </div>
             </div>
@@ -37,7 +38,7 @@
                                         <a href="<?php echo e(route('blog.show', $post->id)); ?>"><img class="card-img-top" src="<?php echo e(asset($post->image)); ?>" alt="Card image cap"></a>
                                         <div class="p-6 text-center">
                                             <p>
-                                                <a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="blog/categories/<?php echo e($post->category->id); ?>">
+                                                <a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">
                                                     <?php echo e($post->category->name); ?>
 
                                                 </a>
@@ -73,4 +74,4 @@
     </main>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mcms3.1\resources\views/welcome.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mcms3.1\resources\views/blog/tag.blade.php ENDPATH**/ ?>
