@@ -41,9 +41,17 @@
 
             </ul>
         </section>
-
+        <?php if(auth()->guard()->check()): ?>
+            <a class="btn btn-xs btn-round btn-success mr-3" href="<?php echo e(route('home')); ?>">Dashboard</a>
+            <form action="<?php echo e(route('logout')); ?>" method="post">
+                <?php echo csrf_field(); ?>
+                <button class ="btn btn-xs btn-round btn-danger" type="submit">Logout</button>
+            </form>
+        <?php endif; ?>
+        <?php if(auth()->guard()->guest()): ?>
         <a class="btn btn-xs btn-round btn-success" href="<?php echo e(route('login')); ?>">Login</a>
-
+        <a class="btn btn-xs btn-round btn-warning ml-3" href="<?php echo e(route('register')); ?>">Register</a>
+        <?php endif; ?>
     </div>
 </nav><!-- /.navbar -->
 
@@ -64,10 +72,10 @@
 
             <div class="col-6 col-lg-3 text-right order-lg-last">
                 <div class="social">
-                    <a class="social-facebook" href="https://www.facebook.com/thethemeio"><i class="fa fa-facebook"></i></a>
-                    <a class="social-twitter" href="https://twitter.com/thethemeio"><i class="fa fa-twitter"></i></a>
-                    <a class="social-instagram" href="https://www.instagram.com/thethemeio/"><i class="fa fa-instagram"></i></a>
-                    <a class="social-dribbble" href="https://dribbble.com/thethemeio"><i class="fa fa-dribbble"></i></a>
+                    <a class="social-facebook" href="https://www.facebook.com/marsislav515"><i class="fa fa-facebook"></i></a>
+                    <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="social-instagram" href="#/"><i class="fa fa-instagram"></i></a>
+                    <a class="social-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
                 </div>
             </div>
 
