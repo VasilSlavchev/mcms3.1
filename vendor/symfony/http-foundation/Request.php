@@ -126,7 +126,7 @@ class Request
     /**
      * @var string|resource|false|null
      */
-    public $content;
+    protected $content;
 
     /**
      * @var array
