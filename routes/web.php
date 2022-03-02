@@ -25,7 +25,7 @@ Route::get('/results', function(){
         ->with('query', request('query'));
 });
 
-Route::get('/post/{slug}', [
+Route::get('post/{slug}', [
     'uses' => 'FrontEndController@singlePost',
     'as' => 'post.single'
 ]);
