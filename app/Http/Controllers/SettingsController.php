@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class SettingsController extends Controller
 {
 
-    public function __construct()
+    public function __construct() 
     {
         $this->middleware('admin');
     }
@@ -23,9 +23,9 @@ class SettingsController extends Controller
     {
         $this->validate(request(), [
             'site_name' => 'required',
-            'contact_number',
-            'contact_email',
-            'address'
+            'contact_number' => 'required',
+            'contact_email' => 'required',
+            'address' => 'required'
         ]);
 
         $settings = Setting::first();

@@ -1,14 +1,10 @@
 <?php
 
-Route::post('/subscribe', function(){
-    $email = request('email');
 
-    Newsletter::subscribe($email);
 
-    Session::flash('subscribed', 'Successfully subscribed.');
-    return redirect()->back();
+Route::get('/test', function(){
+    return App\User::find(1)->profile;
 });
-
 
 Route::get('/', [
     'uses' => 'FrontEndController@index',
@@ -16,16 +12,16 @@ Route::get('/', [
 ]);
 
 Route::get('/results', function(){
-    $posts = \App\Post::where('title','like',  '%' . request('query') . '% ')->get();
+        $posts = \App\Post::where('title','like',  '%' . request('query') . '%')->get();
 
-    return view('results')->with('posts', $posts)
-        ->with( 'title', 'Search results : ' . request('query'))
-        ->with('settings', \App\Setting::first())
-        ->with('categories', \App\Category::take(5)->get())
-        ->with('query', request('query'));
+        return view('results')->with('posts', $posts)
+                              ->with('title', 'Search results : ' . request('query'))
+                              ->with('settings', \App\Setting::first())
+                              ->with('categories', \App\Category::take(5)->get())
+                              ->with('query', request('query'));
 });
 
-Route::get('post/{slug}', [
+Route::get('/post/{slug}', [
     'uses' => 'FrontEndController@singlePost',
     'as' => 'post.single'
 ]);
@@ -46,7 +42,7 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
-    Route::get('/home', [
+    Route::get('/dashboard', [
         'uses' => 'HomeController@index',
         'as' => 'home'
     ]);
@@ -105,7 +101,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'uses' => 'CategoriesController@index',
         'as' => 'categories'
     ]);
-
+    
     Route::post('/category/store', [
         'uses' => 'CategoriesController@store',
         'as' => 'category.store'
@@ -207,11 +203,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'uses' => 'SettingsController@update',
         'as' => 'settings.update'
     ]);
-
-    Route::get('/{slug}', [
-        'uses' => 'FrontEndController@singlePost',
-        'as' => 'post.single'
-    ]);
-
 
 });

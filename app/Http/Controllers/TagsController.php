@@ -84,7 +84,7 @@ class TagsController extends Controller
     {
         $this->validate($request, [
             'tag' => 'required'
-        ]);
+        ]); 
 
         $tag = Tag::find($id);
 

@@ -11,26 +11,20 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-       $user=  App\User::create([
-            'name'=>'admin',
-            'email'=>'example@example.com',
-            'password'=>bcrypt('password'),
-            'admin'=>1
+        $user = App\User::create([
+            'name' => 'admin',
+            'email' => 'example@example.com',
+            'password' => bcrypt('password'),
+            'admin' => 1
         ]);
 
         App\Profile::create([
-        'user_id'=>$user->id,
-         'avatar'=>'uploads/avatars/1.jpg',
-        'about'=>('Lorem ipsum..... sample about text'),
-        'facebook'=>'https://facebook.com',
-        'youtube'=>'https://youtube.com',
-        'linkedin'=>'https://linkedin.com',
-        'instagram'=>'https://instagram.com',
-        'twitter'=>'https://twitter.com',
-        'email'=>'example@example.com',
-        'phone'=>'0xxx xxx xxx',
-        'address'=>'Sample, Sample, Sample, XXX',
-
+            'user_id' => $user->id,
+            'avatar' => 'uploads/avatars/1.png',
+            'about' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est veniam non corporis sunt quas voluptates eveniet perferendis repudiandae, voluptate natus optio eius reiciendis, placeat velit nemo molestiae fugiat fuga.',
+            'facebook' => 'https://facebook.com',
+            'youtube' => 'https://youtube.com'
         ]);
+
     }
 }

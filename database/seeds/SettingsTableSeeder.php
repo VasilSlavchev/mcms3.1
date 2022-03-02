@@ -12,7 +12,7 @@ class SettingsTableSeeder extends Seeder
     public function run()
     {
         \App\Setting::create([
-            'site_name' => "mCMS3.1",
+            'site_name' => "mCMS 3.1",
             'address' => 'Bulgaria',
             'contact_number' => '+359 000 000 000',
             'contact_email' => 'info@example.com'

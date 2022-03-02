@@ -56,7 +56,7 @@ class UsersController extends Controller
 
         $profile = Profile::create([
             'user_id' => $user->id,
-            'avatar' => 'uploads/avatars/1.jpg'
+            'avatar' => 'uploads/avatars/1.png'
         ]);
 
         Session::flash('success', 'User added successfully.');
@@ -139,6 +139,6 @@ class UsersController extends Controller
         Session::flash('success', 'Successfully changed user permissions.');
 
         return redirect()->back();
-
+        
     }
 }

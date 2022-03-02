@@ -1,4 +1,7 @@
 <?php $__env->startSection('content'); ?>
+<div class="d-flex justify-content-end mb-2">
+        <a href="<?php echo e(route('category.create')); ?>" class="btn btn-success">Add Category</a>
+    </div>
 
     <div class="panel panel-default">
         <div class="panel-heading">

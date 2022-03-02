@@ -73,6 +73,8 @@ class ProfilesController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
+            'facebook' => 'required|url',
+            'youtube' => 'required|url'
         ]);
 
         $user = Auth::user();
@@ -85,7 +87,7 @@ class ProfilesController extends Controller
 
             $avatar->move('uploads/avatars', $avatar_new_name);
 
-            $user->profile->avatar = 'uploads/avatars/' . $avatar_new_name ;
+            $user->profile->avatar = 'uploads/avatars/' . $avatar_new_name ; 
 
             $user->profile->save();
         }
@@ -102,7 +104,7 @@ class ProfilesController extends Controller
         if($request->has('password'))
         {
             $user->password = bcrypt($request->password);
-
+            
             $user->save();
         }
 

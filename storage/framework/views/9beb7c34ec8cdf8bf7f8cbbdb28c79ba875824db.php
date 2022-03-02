@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/grid.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/styles.css')); ?>">
 
-
+    <link rel="stylesheet" href="<?php echo e(asset('css/toastr.min.css')); ?>">
     <!--Plugins styles-->
 
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/jquery.mCustomScrollbar.min.css')); ?>">
@@ -21,7 +21,7 @@
 
     <!--Styles for RTL-->
 
-    <!--<link rel="stylesheet" type="text/css" href="app/css/rtl.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/rtl.css')); ?>">-->
 
     <!--External fonts-->
 
@@ -41,46 +41,25 @@
 <body class=" ">
 
 <div class="content-wrapper">
-
+    
     <?php echo $__env->make('includes.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <?php echo $__env->yieldContent('content'); ?>
-</div>
 
 <!-- Subscribe Form -->
 
-<div class="container-fluid bg-green-color">
-    <div class="row">
-        <div class="container">
-            <div class="row">
-                <div class="subscribe scrollme">
-                    <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
-                        <h4 class="subscribe-title">Send me a message!</h4>
-                        <form class="subscribe-form" method="post" action="">
-                            <input class="email input-standard-grey input-white" name="email" required="required" placeholder="Your Email Address" type="email">
-                            <button class="subscr-btn">Send
-                                <span class="semicircle--right"></span>
-                            </button>
-                        </form>
-                        <div class="sub-title">Send me you recomendations and questions</div>
-
-                    </div>
-
-                    <div class="images-block">
-                        <img src="<?php echo e(asset('app/img/subscr-gear.png')); ?>" alt="gear" class="gear">
-                        <img src="<?php echo e(asset('app/img/subscr1.png')); ?>" alt="mail" class="mail">
-                        <img src="<?php echo e(asset('app/img/subscr-mailopen.png')); ?>" alt="mail" class="mail-2">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php echo $__env->make('includes.form', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <!-- End Subscribe Form -->
 </div>
 
+
+
+<!-- Footer -->
+
 <?php echo $__env->make('includes.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+<!-- End Footer -->
 
 <svg style="display:none;">
     <symbol id="arrow-left" viewBox="122.9 388.2 184.3 85">
@@ -118,7 +97,6 @@
 </svg>
 
 <!-- Overlay Search -->
-
 <?php echo $__env->make('includes.search', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <!-- End Overlay Search -->
@@ -130,14 +108,20 @@
 <script src="<?php echo e(asset('app/js/swiper.jquery.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/theme-plugins.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/main.js')); ?>"></script>
-<script src="<?php echo e(asset('app/js/form-actions.js')); ?>"></script>
+
+<script src="<?php echo e(asset('js/toastr.min.js')); ?>"></script>
 
 <script src="<?php echo e(asset('app/js/velocity.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/ScrollMagic.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/animation.velocity.min.js')); ?>"></script>
+ <script>
+        <?php if(Session::has('subscribed')): ?>
+            toastr.success("<?php echo e(Session::get('subscribed')); ?>")
+        <?php endif; ?>
+    </script>
 
-<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-621f8277ad26fffd"></script>
 <!-- ...end JS Script -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587d79f7e064cbd5"></script> 
 </body>
 </html>
 <?php /**PATH C:\laragon\www\mcms3.1\resources\views/layouts/frontend.blade.php ENDPATH**/ ?>

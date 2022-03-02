@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/grid.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/styles.css')); ?>">
 
-
+    <link rel="stylesheet" href="<?php echo e(asset('css/toastr.min.css')); ?>">
+    <!--Plugins styles-->
     <!--Plugins styles-->
 
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/jquery.mCustomScrollbar.min.css')); ?>">
@@ -21,7 +22,7 @@
 
     <!--Styles for RTL-->
 
-    <!--<link rel="stylesheet" type="text/css" href="app/css/rtl.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo e(asset('app/css/rtl.css')); ?>">-->
 
     <!--External fonts-->
 
@@ -41,7 +42,7 @@
 <body class=" ">
 
 <div class="content-wrapper">
-
+    
     <?php echo $__env->make('includes.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <div class="header-spacer"></div>
@@ -51,27 +52,26 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <article class="hentry post post-standard has-post-thumbnail sticky">
+                        <div class="post-thumb">
+                            <img src="<?php echo e($first_post->featured); ?>" alt="<?php echo e($first_post->title); ?>">
+                            <div class="overlay"></div>
+                            <a href="<?php echo e($first_post->featured); ?>" class="link-image js-zoom-image">
+                                <i class="seoicon-zoom"></i>
+                            </a>
+                            <a href="#" class="link-post">
+                                <i class="seoicon-link-bold"></i>
+                            </a>
+                        </div>
 
-                    <div class="post-thumb">
-                        <img src="<?php echo e($first_post->featured); ?>" alt="<?php echo e($first_post->title); ?>">
-                        <div class="overlay"></div>
-                        <a href="<?php echo e($first_post->featured); ?>" class="link-image js-zoom-image">
-                            <i class="seoicon-zoom"></i>
-                        </a>
-                        <a href="#" class="link-post">
-                            <i class="seoicon-link-bold"></i>
-                        </a>
-                    </div>
+                        <div class="post__content">
 
-                    <div class="post__content">
+                            <div class="post__content-info">
 
-                        <div class="post__content-info">
+                                    <h2 class="post__title entry-title text-center">
+                                        <a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>"><?php echo e($first_post->title); ?></a>
+                                    </h2>
 
-                            <h2 class="post__title entry-title text-center">
-                                <a href="<?php echo e(route('post.single', ['slug'=>$first_post->slug])); ?>"><?php echo e($first_post->title); ?> </a>
-                            </h2>
-
-                            <div class="post-additional-info">
+                                    <div class="post-additional-info">
 
                                         <span class="post__date">
 
@@ -84,19 +84,14 @@
 
                                         </span>
 
-                                <span class="category">
+                                        <span class="category">
                                             <i class="seoicon-tags"></i>
-                                            <a href="<?php echo e(route('category.single', ['id'=>$first_post->category->id])); ?>"><?php echo e($first_post->category->name); ?></a>
+                                            <a href="<?php echo e(route('category.single', ['id' => $first_post->category->id ])); ?>"><?php echo e($first_post->category->name); ?></a>
                                         </span>
 
-                                <span class="post__comments">
-                                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                            6
-                                        </span>
-
+                                    </div>
                             </div>
                         </div>
-                    </div>
 
                 </article>
             </div>
@@ -107,77 +102,71 @@
             <div class="col-lg-6">
                 <article class="hentry post post-standard has-post-thumbnail sticky">
 
-                    <div class="post-thumb">
-                        <img src="<?php echo e($second_post->featured); ?>" alt="<?php echo e($second_post->title); ?>">
-                        <div class="overlay"></div>
-                        <a href="<?php echo e($second_post->category->name); ?>" class="link-image js-zoom-image">
-                            <i class="seoicon-zoom"></i>
-                        </a>
-                        <a href="#" class="link-post">
-                            <i class="seoicon-link-bold"></i>
-                        </a>
-                    </div>
+                        <div class="post-thumb">
+                            <img src="<?php echo e($second_post->featured); ?>" alt="seo">
+                            <div class="overlay"></div>
+                            <a href="<?php echo e($second_post->featured); ?>" class="link-image js-zoom-image">
+                                <i class="seoicon-zoom"></i>
+                            </a>
+                            <a href="#" class="link-post">
+                                <i class="seoicon-link-bold"></i>
+                            </a>
+                        </div>
 
-                    <div class="post__content">
+                        <div class="post__content">
 
-                        <div class="post__content-info">
+                            <div class="post__content-info">
 
-                            <h2 class="post__title entry-title text-center">
-                                <a href="15_blog_details.html"><?php echo e($second_post->title); ?></a>
-                            </h2>
+                                    <h2 class="post__title entry-title text-center">
+                                        <a href="15_blog_details.html"><?php echo e($second_post->title); ?></a>
+                                    </h2>
 
-                            <div class="post-additional-info">
+                                    <div class="post-additional-info">
 
                                         <span class="post__date">
 
                                             <i class="seoicon-clock"></i>
 
                                             <time class="published" datetime="2016-04-17 12:00:00">
-                                               <?php echo e($second_post->created_at->toFormattedDateString()); ?>
+                                                <?php echo e($second_post->created_at->toFormattedDateString()); ?>
 
                                             </time>
 
                                         </span>
 
-                                <span class="category">
+                                        <span class="category">
                                             <i class="seoicon-tags"></i>
-                                            <a href="<?php echo e(route('category.single', ['id' =>$second_post->category->id])); ?>"><?php echo e($second_post->category->name); ?></a>
+                                            <a href="<?php echo e(route('category.single', ['id' => $second_post->category->id ])); ?>"><?php echo e($second_post->category->name); ?></a>
                                         </span>
-
-                                <span class="post__comments">
-                                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                            6
-                                        </span>
-
+                                    </div>
                             </div>
                         </div>
-                    </div>
 
                 </article>
             </div>
             <div class="col-lg-6">
                 <article class="hentry post post-standard has-post-thumbnail sticky">
 
-                    <div class="post-thumb">
-                        <img src="<?php echo e($third_post->featured); ?>" alt="<?php echo e($third_post->name); ?>">
-                        <div class="overlay"></div>
-                        <a href="<?php echo e($third_post->featured); ?>" class="link-image js-zoom-image">
-                            <i class="seoicon-zoom"></i>
-                        </a>
-                        <a href="#" class="link-post">
-                            <i class="seoicon-link-bold"></i>
-                        </a>
-                    </div>
+                        <div class="post-thumb">
+                            <img src="<?php echo e($third_post->featured); ?>" alt="seo">
+                            <div class="overlay"></div>
+                            <a href="<?php echo e($third_post->featured); ?>" class="link-image js-zoom-image">
+                                <i class="seoicon-zoom"></i>
+                            </a>
+                            <a href="#" class="link-post">
+                                <i class="seoicon-link-bold"></i>
+                            </a>
+                        </div>
 
-                    <div class="post__content">
+                        <div class="post__content">
 
-                        <div class="post__content-info">
+                            <div class="post__content-info">
 
-                            <h2 class="post__title entry-title text-centered">
-                                <a href="15_blog_details.html"><?php echo e($third_post->title); ?>t</a>
-                            </h2>
+                                    <h2 class="post__title entry-title text-center">
+                                        <a href="<?php echo e(route('post.single', ['slug' => $third_post->slug ])); ?>"><?php echo e($third_post->title); ?></a>
+                                    </h2>
 
-                            <div class="post-additional-info">
+                                    <div class="post-additional-info">
 
                                         <span class="post__date">
 
@@ -190,19 +179,19 @@
 
                                         </span>
 
-                                <span class="category">
+                                        <span class="category">
                                             <i class="seoicon-tags"></i>
-                                            <a href="<?php echo e(route('category.single', ['id' =>$third_post->category->id])); ?>"><?php echo e($third_post->category->name); ?></a>
+                                            <a href="<?php echo e(route('category.single', ['id' => $third_post->category->id ])); ?>"><?php echo e($third_post->category->name); ?></a>
                                         </span>
 
-                                <span class="post__comments">
+                                        <span class="post__comments">
                                             <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
                                             6
                                         </span>
 
+                                    </div>
                             </div>
                         </div>
-                    </div>
 
                 </article>
             </div>
@@ -214,103 +203,81 @@
         <div class="row medium-padding120 bg-border-color">
             <div class="container">
                 <div class="col-lg-12">
-                    <div class="offers">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                                <div class="heading">
-                                    <h4 class="h1 heading-title"><?php echo e($career->name); ?></h4>
-                                    <div class="heading-line">
-                                        <span class="short-line"></span>
-                                        <span class="long-line"></span>
-                                    </div>
+                <div class="offers">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                            <div class="heading">
+                                <h4 class="h1 heading-title"><?php echo e($career->name); ?></h4>
+                                <div class="heading-line">
+                                    <span class="short-line"></span>
+                                    <span class="long-line"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="case-item-wrap">
-                                <?php $__currentLoopData = $career->post()->orderBy('created_at', 'desc')->take(3)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
+                    </div>
+                    <div class="row">
+                        <div class="case-item-wrap">
+                            <?php $__currentLoopData = $career->posts()->orderBy('created_at', 'desc')->take(3)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="case-item">
-                                        <div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
-                                            <img src="<?php echo e($post->featured); ?>" alt="<?php echo e($post->title); ?>">
+                                        <div class="case-item__thumb">
+                                            <img src="<?php echo e($post->featured); ?>" alt="our case">
                                         </div>
-                                        <h6 class="case-item__title text-center"><?php echo e($post->title); ?></h6>
+                                        <h6 class="case-item__title text-center"><a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><?php echo e($post->title); ?></a></h6>
                                     </div>
                                 </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </div>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
-                    <div class="padded-50"></div>
-                    <div class="offers">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                                <div class="heading">
-                                    <h4 class="h1 heading-title"><?php echo e($security->name); ?></h4>
-                                    <div class="heading-line">
-                                        <span class="short-line"></span>
-                                        <span class="long-line"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="case-item-wrap">
-                                <?php $__currentLoopData = $security->post()->orderBy('created_at', 'desc')->take(3)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                        <div class="case-item">
-                                            <div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
-                                                <img src="<?php echo e($post->featured); ?>" alt="<?php echo e($post->title); ?>">
-                                            </div>
-                                            <h6 class="case-item__title text-center"><?php echo e($post->title); ?></h6>
-                                        </div>
-                                    </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="padded-50"></div>
                 </div>
+                <div class="padded-50"></div>
+                <div class="offers">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                            <div class="heading">
+                                <h4 class="h1 heading-title"><?php echo e($tutorials->name); ?></h4>
+                                <div class="heading-line">
+                                    <span class="short-line"></span>
+                                    <span class="long-line"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="case-item-wrap">
+                            <?php $__currentLoopData = $tutorials->posts()->orderBy('created_at', 'desc')->take(3)->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="case-item">
+                                        <div class="case-item__thumb">
+                                            <img src="<?php echo e($post->featured); ?>" alt="our case">
+                                        </div>
+                                        <h6 class="case-item__title text-center"><a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><?php echo e($post->title); ?></a></h6>
+                                    </div>
+                                </div>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="padded-50"></div>
+            </div>
             </div>
         </div>
     </div>
 
-    <!-- Subscribe Form -->
+<!-- Subscribe Form -->
 
-    <div class="container-fluid bg-green-color">
-        <div class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="subscribe scrollme">
-                        <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
-                            <h4 class="subscribe-title">Email Newsletters!</h4>
-                            <form class="subscribe-form" method="post" action="">
-                                <input class="email input-standard-grey input-white" name="email" required="required" placeholder="Your Email Address" type="email">
-                                <button class="subscr-btn">subscribe
-                                    <span class="semicircle--right"></span>
-                                </button>
-                            </form>
-                            <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div>
+<?php echo $__env->make('includes.form', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-                        </div>
-
-                        <div class="images-block">
-                            <img src="<?php echo e(asset('app/img/subscr-gear.png')); ?>" alt="gear" class="gear">
-                            <img src="<?php echo e(asset('app/img/subscr1.png')); ?>" alt="mail" class="mail">
-                            <img src="<?php echo e(asset('app/img/subscr-mailopen.png')); ?>" alt="mail" class="mail-2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- End Subscribe Form -->
+<!-- End Subscribe Form -->
 </div>
 
+
+
+<!-- Footer -->
+
 <?php echo $__env->make('includes.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+<!-- End Footer -->
 
 <svg style="display:none;">
     <symbol id="arrow-left" viewBox="122.9 388.2 184.3 85">
@@ -360,13 +327,19 @@
 <script src="<?php echo e(asset('app/js/swiper.jquery.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/theme-plugins.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/main.js')); ?>"></script>
-<script src="<?php echo e(asset('app/js/form-actions.js')); ?>"></script>
+
+
+<script src="<?php echo e(asset('js/toastr.min.js')); ?>"></script>
 
 <script src="<?php echo e(asset('app/js/velocity.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/ScrollMagic.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/animation.velocity.min.js')); ?>"></script>
 
-
+ <script>
+    <?php if(Session::has('subscribed')): ?>
+        toastr.success("<?php echo e(Session::get('subscribed')); ?>");
+    <?php endif; ?>
+</script>
 <!-- ...end JS Script -->
 
 </body>

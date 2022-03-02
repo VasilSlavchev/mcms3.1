@@ -39,7 +39,7 @@ class PostsController extends Controller
         }
 
         return view('admin.posts.create')->with('categories', $categories)
-            ->with('tags', $tags);
+                                        ->with('tags', $tags);
     }
 
     /**
@@ -53,7 +53,7 @@ class PostsController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'featured' => 'required',
+            'featured' => 'required|image',
             'content' => 'required',
             'category_id' => 'required',
             'tags' => 'required'
@@ -104,8 +104,8 @@ class PostsController extends Controller
         $post = Post::find($id);
 
         return view('admin.posts.edit')->with('post', $post)
-            ->with('categories', Category::all())
-            ->with('tags', Tag::all());
+                                      ->with('categories', Category::all())
+                                      ->with('tags', Tag::all());
     }
 
     /**
@@ -135,7 +135,7 @@ class PostsController extends Controller
             $featured->move('uploads/posts', $featured_new_name);
 
             $post->featured = 'uploads/posts/'.$featured_new_name;
-
+            
         }
 
         $post->title = $request->title;
@@ -170,14 +170,14 @@ class PostsController extends Controller
 
     public function trashed() {
         $posts = Post::onlyTrashed()->get();
-
+        
         return view('admin.posts.trashed')->with('posts', $posts);
     }
 
     public function kill($id)
     {
         $post = Post::withTrashed()->where('id', $id)->first();
-
+        
         $post->forceDelete();
 
         Session::flash('success', 'Post deleted permanently.');
