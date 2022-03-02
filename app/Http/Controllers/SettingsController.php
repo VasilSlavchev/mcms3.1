@@ -23,9 +23,9 @@ class SettingsController extends Controller
     {
         $this->validate(request(), [
             'site_name' => 'required',
-            'contact_number' => 'required',
-            'contact_email' => 'required',
-            'address' => 'required'
+            'contact_number',
+            'contact_email',
+            'address'
         ]);
 
         $settings = Setting::first();

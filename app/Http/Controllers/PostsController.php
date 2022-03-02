@@ -53,7 +53,7 @@ class PostsController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'featured' => 'required|image',
+            'featured' => 'required',
             'content' => 'required',
             'category_id' => 'required',
             'tags' => 'required'

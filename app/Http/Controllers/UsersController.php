@@ -56,7 +56,7 @@ class UsersController extends Controller
 
         $profile = Profile::create([
             'user_id' => $user->id,
-            'avatar' => 'uploads/avatars/1.png'
+            'avatar' => 'uploads/avatars/1.jpg'
         ]);
 
         Session::flash('success', 'User added successfully.');

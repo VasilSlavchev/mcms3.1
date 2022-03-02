@@ -63,12 +63,12 @@
     ),
     'doctrine/lexer' => 
     array (
-      'pretty_version' => '1.2.3',
-      'version' => '1.2.3.0',
+      'pretty_version' => '1.2.2',
+      'version' => '1.2.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c268e882d4dbdd85e36e4ad69e02dc284f89d229',
+      'reference' => '9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c',
     ),
     'dragonmantank/cron-expression' => 
     array (
@@ -783,12 +783,12 @@
     ),
     'symfony/console' => 
     array (
-      'pretty_version' => 'v4.4.38',
-      'version' => '4.4.38.0',
+      'pretty_version' => 'v4.4.37',
+      'version' => '4.4.37.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5a50085bf5460f0c0d60a50b58388c1249826b8a',
+      'reference' => '0259f01dbf9d77badddbbf4c2abb681f24c9cac6',
     ),
     'symfony/css-selector' => 
     array (
@@ -871,21 +871,21 @@
     ),
     'symfony/http-foundation' => 
     array (
-      'pretty_version' => 'v4.4.38',
-      'version' => '4.4.38.0',
+      'pretty_version' => 'v4.4.37',
+      'version' => '4.4.37.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cb2fe618293cf254e524f19b393e2e3eac083d02',
+      'reference' => '27782a72399b92f44624f801adc5c28fb3f9d6c7',
     ),
     'symfony/http-kernel' => 
     array (
-      'pretty_version' => 'v4.4.38',
-      'version' => '4.4.38.0',
+      'pretty_version' => 'v4.4.37',
+      'version' => '4.4.37.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9726dcde5ea94e18d0bddf73d1f08c98e40a9181',
+      'reference' => 'ef830fb76eea90dc778fd68c8a7816fbc6109ed6',
     ),
     'symfony/mime' => 
     array (
@@ -1022,12 +1022,12 @@
     ),
     'symfony/var-dumper' => 
     array (
-      'pretty_version' => 'v4.4.38',
-      'version' => '4.4.38.0',
+      'pretty_version' => 'v4.4.37',
+      'version' => '4.4.37.0',
       'aliases' => 
       array (
       ),
-      'reference' => '20030f729d5539e2672181930fd6d5a3525f118e',
+      'reference' => 'e74eee4ec02de71db3d60151aa5b203c990556df',
     ),
     'theseer/tokenizer' => 
     array (
