@@ -4,15 +4,15 @@
             <div class="row">
                 <div class="subscribe scrollme">
                     <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
-                        <h4 class="subscribe-title">Email Newsletters!</h4>
+                        <h4 class="subscribe-title">Send letter</h4>
                         <form class="subscribe-form" method="post" action="/subscribe">
                             {{ csrf_field() }}
                             <input class="email input-standard-grey input-white" name="email" placeholder="Your Email Address..." type="email">
-                            <button class="subscr-btn" type="submit">subscribe
+                            <button class="subscr-btn" type="submit">Send
                                 <span class="semicircle--right"></span>
                             </button>
                         </form>
-                        <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div>
+                        
 
                     </div>
 

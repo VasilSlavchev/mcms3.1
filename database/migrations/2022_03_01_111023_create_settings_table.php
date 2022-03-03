@@ -19,6 +19,11 @@ class CreateSettingsTable extends Migration
             $table->string('contact_number');
             $table->string('contact_email');
             $table->string('address');
+            $table->text('site_info');
+            $table->string('footer_text1');
+            $table->string('footer_text2');
+            $table->string('footer_text3');
+
             $table->timestamps();
         });
     }

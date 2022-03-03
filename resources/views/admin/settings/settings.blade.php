@@ -16,6 +16,10 @@
                               <label for="name">Site name</label>
                               <input type="text" name="site_name" value="{{ $settings->site_name }}" class="form-control">
                         </div>
+                        <div class="form-group">
+                              <label for="site_info">About site:</label>
+                              <textarea name="site_info" id="site_info" cols="30" rows="10" class="form-control" >{{ $settings->site_info }}</textarea>
+                        </div>
 
                         <div class="form-group">
                               <label for="name">Address</label>
@@ -30,6 +34,18 @@
                         <div class="form-group">
                               <label for="name">Contact email</label>
                               <input type="text" name="contact_email" class="form-control" value="{{ $settings->contact_email }}">
+                        </div>
+                        <div class="form-group">
+                              <label for="footer_text1">Footer text: Column: 1</label>
+                              <input type="text" name="footer_text1" class="form-control" value="{{ $settings->footer_text1 }}">
+                        </div>
+                        <div class="form-group">
+                              <label for="footer_text2">Footer text: Column: 2</label>
+                              <input type="text" name="footer_text2" class="form-control" value="{{ $settings->footer_text2 }}">
+                        </div>
+                        <div class="form-group">
+                              <label for="footer_text3">Footer text: Column: 3</label>
+                              <input type="text" name="footer_text3" class="form-control" value="{{ $settings->footer_text3 }}">
                         </div>
 
 

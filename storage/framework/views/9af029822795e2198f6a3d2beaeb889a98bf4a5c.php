@@ -184,10 +184,7 @@
                                             <a href="<?php echo e(route('category.single', ['id' => $third_post->category->id ])); ?>"><?php echo e($third_post->category->name); ?></a>
                                         </span>
 
-                                        <span class="post__comments">
-                                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                            6
-                                        </span>
+                                        
 
                                     </div>
                             </div>

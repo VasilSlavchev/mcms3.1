@@ -181,10 +181,7 @@
                                             <a href="{{ route('category.single', ['id' => $third_post->category->id ]) }}">{{ $third_post->category->name }}</a>
                                         </span>
 
-                                        <span class="post__comments">
-                                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                            6
-                                        </span>
+                                        
 
                                     </div>
                             </div>
