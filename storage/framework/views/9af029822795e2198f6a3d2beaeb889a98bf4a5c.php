@@ -58,7 +58,7 @@
                             <a href="<?php echo e($first_post->featured); ?>" class="link-image js-zoom-image">
                                 <i class="seoicon-zoom"></i>
                             </a>
-                            <a href="#" class="link-post">
+                            <a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>" class="link-post">
                                 <i class="seoicon-link-bold"></i>
                             </a>
                         </div>
@@ -108,7 +108,7 @@
                             <a href="<?php echo e($second_post->featured); ?>" class="link-image js-zoom-image">
                                 <i class="seoicon-zoom"></i>
                             </a>
-                            <a href="#" class="link-post">
+                            <a href="<?php echo e(route('post.single', ['slug' => $second_post->slug ])); ?>" class="link-post">
                                 <i class="seoicon-link-bold"></i>
                             </a>
                         </div>
@@ -118,7 +118,7 @@
                             <div class="post__content-info">
 
                                     <h2 class="post__title entry-title text-center">
-                                        <a href="15_blog_details.html"><?php echo e($second_post->title); ?></a>
+                                        <a href="<?php echo e(route('post.single', ['slug' => $second_post->slug ])); ?>"><?php echo e($second_post->title); ?></a>
                                     </h2>
 
                                     <div class="post-additional-info">
