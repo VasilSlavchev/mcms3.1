@@ -88,7 +88,10 @@
                     <div class="col-lg-4">
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <a href="<?php echo e(route('home')); ?>">Home</a>
+                                <a href="<?php echo e(route('home')); ?>">Dashboard</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="<?php echo e(route('posts')); ?>">Posts</a>
                             </li>
 
                             <li class="list-group-item">
@@ -103,40 +106,22 @@
                                 <li class="list-group-item">
                                     <a href="<?php echo e(route('users')); ?>">Users</a>
                                 </li>
-
-                                <li class="list-group-item">
-                                    <a href="<?php echo e(route('user.create')); ?>">New user</a>
-                                </li>
                             <?php endif; ?>
 
                             <li class="list-group-item">
                                     <a href="<?php echo e(route('user.profile')); ?>">My profile</a>
                                 </li>
 
-                            <li class="list-group-item">
-                                <a href="<?php echo e(route('tag.create')); ?>">Create tag</a>
-                            </li>
-
-                            <li class="list-group-item">
-                                <a href="<?php echo e(route('posts')); ?>">All posts</a>
-                            </li>
-
-                            <li class="list-group-item">
-                                <a href="<?php echo e(route('posts.trashed')); ?>">All trashed posts</a>
-                            </li>
-
-                            <li class="list-group-item">
-                                <a href="<?php echo e(route('category.create')); ?>">Create new category</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="<?php echo e(route('post.create')); ?>">Create new post</a>
-                            </li>
-
                             <?php if(Auth::user()->admin): ?>
                                 <li class="list-group-item">
                                     <a href="<?php echo e(route('settings')); ?>">Settings</a>
                                 </li>
                             <?php endif; ?>
+                        </ul>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="<?php echo e(route('posts.trashed')); ?>">All trashed posts</a>
+                            </li>
                         </ul>
                     </div>
                 <?php endif; ?>

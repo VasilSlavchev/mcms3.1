@@ -134,7 +134,7 @@
                                     </div>
                               </div>
 
-                              @include('includes.disqus')
+                              @include('includes.comments')
                         </div>
 
                         

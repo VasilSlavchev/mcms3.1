@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="d-flex justify-content-end mb-2">
+  <a href="{{ route('user.create') }}" class="btn btn-success">Add User</a>
+</div>
       <div class="panel panel-default">
             <div class="panel-heading">
                   Users

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex justify-content-end mb-2">
-  <a href="{{ route('post.create') }}" class="btn btn-success">Add Post</a>
+  <a href="{{ route('category.create') }}" class="btn btn-success">Add Category</a>
 </div>
 
       <div class="panel panel-default">
