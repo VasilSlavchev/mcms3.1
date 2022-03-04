@@ -36,20 +36,11 @@ class FrontEndController extends Controller
                              ->with('title', $post->title)
                              ->with('settings', Setting::first())
                              ->with('categories', Category::take(5)->get())
+                             ->with('pages', Page::take(5)->get())
                              ->with('next', Post::find($next_id))
                              ->with('prev', Post::find($prev_id))
                              ->with('tags', Tag::all());
     }
-
-   /* public function singlePage($id)
-    {
-        $page = Page::where('id', $id)->first();
-
-            return view('single')->with('page', $page)
-                             ->with('title', $page->name)
-                             ->with('settings', Setting::first());
-    }*/
-
 
 
     public function category($id)
@@ -59,7 +50,8 @@ class FrontEndController extends Controller
         return view('category')->with('category', $category)
                                ->with('title', $category->name)
                                ->with('settings', Setting::first())
-                               ->with('categories', Category::take(5)->get());
+                               ->with('categories', Category::take(5)->get())
+                               ->with('pages', Page::take(5)->get());
     }
 
     public function page($id)
