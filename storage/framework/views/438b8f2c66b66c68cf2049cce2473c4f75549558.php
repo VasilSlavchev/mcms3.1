@@ -18,12 +18,20 @@
                             </span>
                         </a>
                         <ul class="primary-menu-menu" style="overflow: hidden;">
-                            <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                               <li >
-                                    <a href="<?php echo e(route('category.single', ['id' => $category->id ])); ?>"><?php echo e($category->name); ?></a>
+                                    <a href="<?php echo e(route('page.single', ['id' => $page->id ])); ?>"><?php echo e($page->name); ?></a>
                               </li>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            
+                           
                         </ul>
+                        
+                            
+                           
+                        </ul>
+
+                        
                     </nav>
                     <ul class="nav-add">
                         <li class="search search_main" style="color: black; margin-top: 5px;">

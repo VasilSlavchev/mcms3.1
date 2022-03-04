@@ -18,12 +18,20 @@
                             </span>
                         </a>
                         <ul class="primary-menu-menu" style="overflow: hidden;">
-                            @foreach($categories as $category)
+                            @foreach($pages as $page)
                               <li >
-                                    <a href="{{ route('category.single', ['id' => $category->id ]) }}">{{ $category->name }}</a>
+                                    <a href="{{ route('page.single', ['id' => $page->id ]) }}">{{ $page->name }}</a>
                               </li>
                             @endforeach
+                            
+                           
                         </ul>
+                        
+                            
+                           
+                        </ul>
+
+                        
                     </nav>
                     <ul class="nav-add">
                         <li class="search search_main" style="color: black; margin-top: 5px;">

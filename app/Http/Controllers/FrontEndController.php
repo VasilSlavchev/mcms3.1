@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;    
 use App\Post;
+use App\Page;
 use App\Setting;
 use App\Category;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class FrontEndController extends Controller
         return view('index')
                 ->with('title', Setting::first()->site_name)
                 ->with('categories', Category::take(5)->get())
+                ->with('pages', Page::take(5)->get())
                 ->with('first_post', Post::orderBy('created_at', 'desc')->first())
                 ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(1)->get()->first())
                 ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(1)->get()->first())
@@ -39,6 +41,17 @@ class FrontEndController extends Controller
                              ->with('tags', Tag::all());
     }
 
+   /* public function singlePage($id)
+    {
+        $page = Page::where('id', $id)->first();
+
+            return view('single')->with('page', $page)
+                             ->with('title', $page->name)
+                             ->with('settings', Setting::first());
+    }*/
+
+
+
     public function category($id)
     {
         $category = Category::find($id);
@@ -48,6 +61,20 @@ class FrontEndController extends Controller
                                ->with('settings', Setting::first())
                                ->with('categories', Category::take(5)->get());
     }
+
+    public function page($id)
+    {
+        $page = Page::find($id);
+
+        return view('page')
+        ->with('page', $page)
+                               ->with('name', $page->name)
+                               ->with('settings', Setting::first())
+                               ->with('pages', Page::take(5)->get());
+    }
+                                
+                                
+    
 
     public function tag($id)
     {

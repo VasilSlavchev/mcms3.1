@@ -31,6 +31,12 @@ Route::get('/category/{id}', [
     'as' => 'category.single'
 ]);
 
+Route::get('/page/{id}', [
+    'uses' => 'FrontEndController@page',
+    'as' => 'page.single'
+]);
+
+
 Route::get('/tag/{id}', [
     'uses' => 'FrontEndController@tag',
     'as' => 'tag.single'
