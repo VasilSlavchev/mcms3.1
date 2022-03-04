@@ -122,6 +122,58 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as' => 'category.update'
     ]);
 
+/*
+
+
+
+PAGES!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+*/
+
+
+Route::get('/page/create', [
+    'uses' => 'PagesController@create',
+    'as' => 'page.create'
+]);
+
+Route::get('/page', [
+    'uses' => 'PagesController@index',
+    'as' => 'pages'
+]);
+
+Route::post('/page/store', [
+    'uses' => 'PagesController@store',
+    'as' => 'page.store'
+]);
+
+Route::get('/page/edit/{id}', [
+    'uses' => "PagesController@edit",
+    'as' => 'page.edit'
+]);
+
+Route::get('/page/delete/{id}', [
+    'uses' => "PagesController@destroy",
+    'as' => 'page.delete'
+]);
+
+Route::post('/page/update/{id}', [
+    'uses' => 'PagesController@update',
+    'as' => 'page.update'
+]);
+/*
+
+
+PAGES!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+*/
 
     Route::get('/tags', [
         'uses' => 'TagsController@index',

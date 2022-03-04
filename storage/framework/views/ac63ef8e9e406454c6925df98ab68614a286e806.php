@@ -93,9 +93,11 @@
                             <li class="list-group-item">
                                 <a href="<?php echo e(route('posts')); ?>">Posts</a>
                             </li>
-
                             <li class="list-group-item">
                                 <a href="<?php echo e(route('categories')); ?>">Categories</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="<?php echo e(route('pages')); ?>">Pages</a>
                             </li>
 
                             <li class="list-group-item">

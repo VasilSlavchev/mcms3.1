@@ -91,9 +91,11 @@
                             <li class="list-group-item">
                                 <a href="{{ route('posts') }}">Posts</a>
                             </li>
-
                             <li class="list-group-item">
                                 <a href="{{ route('categories') }}">Categories</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ route('pages') }}">Pages</a>
                             </li>
 
                             <li class="list-group-item">
