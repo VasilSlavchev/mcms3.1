@@ -135,7 +135,7 @@
                                     </div>
                               </div>
 
-                              <?php echo $__env->make('includes.disqus', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                              <?php echo $__env->make('includes.comments', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         </div>
 
                         
