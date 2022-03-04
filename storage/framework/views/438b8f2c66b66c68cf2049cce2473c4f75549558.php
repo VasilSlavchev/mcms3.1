@@ -18,6 +18,7 @@
                             </span>
                         </a>
                         <ul class="primary-menu-menu" style="overflow: hidden;">
+                           
                             <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                               <li >
                                     <a href="<?php echo e(route('page.single', ['id' => $page->id ])); ?>"><?php echo e($page->name); ?></a>

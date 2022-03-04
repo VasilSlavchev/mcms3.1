@@ -18,6 +18,7 @@
                             </span>
                         </a>
                         <ul class="primary-menu-menu" style="overflow: hidden;">
+                           
                             @foreach($pages as $page)
                               <li >
                                     <a href="{{ route('page.single', ['id' => $page->id ]) }}">{{ $page->name }}</a>
