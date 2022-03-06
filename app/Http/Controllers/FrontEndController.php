@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Tag;    
+use App\Tag;
 use App\Post;
 use App\Page;
 use App\Setting;
@@ -64,9 +64,9 @@ class FrontEndController extends Controller
                                ->with('settings', Setting::first())
                                ->with('pages', Page::take(5)->get());
     }
-                                
-                                
-    
+
+
+
 
     public function tag($id)
     {
@@ -75,6 +75,7 @@ class FrontEndController extends Controller
         return view('tag')->with('tag', $tag)
                           ->with('title', $tag->tag)
                           ->with('settings', Setting::first())
-                          ->with('categories', Category::take(5)->get());
+                          ->with('categories', Category::take(5)->get())
+                         ->with('pages', Page::take(5)->get());
     }
 }
