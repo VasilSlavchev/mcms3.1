@@ -25,7 +25,8 @@
                                                 Posted by
 
                                                 <div class="post__author-name fn">
-                                                      <a href="#" class="post__author-link"><?php echo e($post->user->name); ?></a>
+                                                      <?php echo e($post->user->name); ?>
+
                                                 </div>
 
                                           </div>

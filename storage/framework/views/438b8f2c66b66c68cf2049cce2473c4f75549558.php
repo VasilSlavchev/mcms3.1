@@ -1,5 +1,19 @@
 <header class="header" id="site-header">
         <div class="container">
+            <?php if(count($errors)>0): ?>
+                <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="alert alert-danger">
+                        <?php echo e($error); ?>
+
+                    </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php endif; ?>
+            <?php if(session('success')): ?>
+                <div class="alert alert-success">
+                    <?php echo e(session('success')); ?>
+
+                </div>
+            <?php endif; ?>
                 <div class="header-content-wrapper">
                     <div class="logo">
                         <div class="logo-text">
@@ -18,21 +32,21 @@
                             </span>
                         </a>
                         <ul class="primary-menu-menu" style="overflow: hidden;">
-                           
+
                             <?php $__currentLoopData = $pages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $page): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                               <li >
                                     <a href="<?php echo e(route('page.single', ['id' => $page->id ])); ?>"><?php echo e($page->name); ?></a>
                               </li>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            
-                           
-                        </ul>
-                        
-                            
-                           
+
+
                         </ul>
 
-                        
+
+
+                        </ul>
+
+
                     </nav>
                     <ul class="nav-add">
                         <li class="search search_main" style="color: black; margin-top: 5px;">
@@ -43,4 +57,5 @@
                     </ul>
                 </div>
         </div>
-    </header><?php /**PATH C:\laragon\www\mcms3.1\resources\views/includes/header.blade.php ENDPATH**/ ?>
+    </header>
+<?php /**PATH C:\laragon\www\mcms3.1\resources\views/includes/header.blade.php ENDPATH**/ ?>

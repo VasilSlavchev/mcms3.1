@@ -42,6 +42,8 @@ Route::get('/tag/{id}', [
     'as' => 'tag.single'
 ]);
 
+Route::post('/contact/submit', 'MessagesController@submit');
+
 Auth::routes();
 
 
@@ -107,7 +109,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'uses' => 'CategoriesController@index',
         'as' => 'categories'
     ]);
-    
+
     Route::post('/category/store', [
         'uses' => 'CategoriesController@store',
         'as' => 'category.store'
@@ -127,19 +129,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'uses' => 'CategoriesController@update',
         'as' => 'category.update'
     ]);
-
-/*
-
-
-
-PAGES!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
-*/
-
 
 Route::get('/page/create', [
     'uses' => 'PagesController@create',
@@ -170,16 +159,6 @@ Route::post('/page/update/{id}', [
     'uses' => 'PagesController@update',
     'as' => 'page.update'
 ]);
-/*
-
-
-PAGES!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
-*/
 
     Route::get('/tags', [
         'uses' => 'TagsController@index',
@@ -260,6 +239,11 @@ PAGES!!!!!!!!!!!!!!!!!!!!!!!!!!!
     Route::post('/settings/update', [
         'uses' => 'SettingsController@update',
         'as' => 'settings.update'
+    ]);
+
+    Route::get('/messages', [
+        'uses' => 'MessagesController@getMessages',
+        'as' => 'get.messages'
     ]);
 
 });

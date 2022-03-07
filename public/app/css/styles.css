@@ -937,16 +937,21 @@ h6, .h6 {
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
-  padding: 25px 50px;
+  padding: 20px 40px;
   font-size: 15px;
   line-height: 1;
   text-transform: uppercase;
   font-family: "Varela Round", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #fff;
-  border-radius: 50px;
+  background: #191919;
+  border-radius: 20px;
   position: relative;
   transition: all .3s ease;
-  text-align: center; }
+  text-align: center;
+  transition: 0.3s all; }
+  .btn:hover {
+    background:#272727;
+  }
   @media (max-width: 768px) {
     .btn {
       padding: 15px 35px;
@@ -2908,12 +2913,13 @@ tbody.collapse.in {
 
 /*------------- #INPUT --------------*/
 input {
-  padding: 20px 40px;
+  padding: 10px 20px;
   border-color: transparent;
   transition: all .3s ease;
   font-size: 16px;
+  border-radius: 20px;
   color: #acacac;
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
   input.input-standard-grey {
     border-radius: 50px;
     background-color: #f7f9f9; }
@@ -2932,13 +2938,14 @@ input {
     background-color: #fff; }
 
 textarea {
-  padding: 20px 40px;
+  padding: 10px 20px;
+  border-radius:20px;
   border-color: transparent;
   transition: all .3s ease;
   font-size: 16px;
   color: #acacac;
   height: 100%;
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
   textarea.input-standard-grey {
     border-radius: 50px;
     background-color: #f7f9f9; }

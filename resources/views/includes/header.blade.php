@@ -1,5 +1,17 @@
 <header class="header" id="site-header">
         <div class="container">
+            @if(count($errors)>0)
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">
+                        {{$error}}
+                    </div>
+                @endforeach
+            @endif
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{session('success')}}
+                </div>
+            @endif
                 <div class="header-content-wrapper">
                     <div class="logo">
                         <div class="logo-text">
@@ -18,21 +30,21 @@
                             </span>
                         </a>
                         <ul class="primary-menu-menu" style="overflow: hidden;">
-                           
+
                             @foreach($pages as $page)
                               <li >
                                     <a href="{{ route('page.single', ['id' => $page->id ]) }}">{{ $page->name }}</a>
                               </li>
                             @endforeach
-                            
-                           
-                        </ul>
-                        
-                            
-                           
+
+
                         </ul>
 
-                        
+
+
+                        </ul>
+
+
                     </nav>
                     <ul class="nav-add">
                         <li class="search search_main" style="color: black; margin-top: 5px;">

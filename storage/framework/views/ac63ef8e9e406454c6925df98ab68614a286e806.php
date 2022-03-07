@@ -87,9 +87,15 @@
                 <?php if(Auth::check()): ?>
                     <div class="col-lg-4">
                         <ul class="list-group">
+                            <li class="list-group-item bg-info">
+                                <a href="<?php echo e(route('get.messages')); ?>">Messages</a>
+                            </li>
+                        </ul>
+                        <ul class="list-group">
                             <li class="list-group-item">
                                 <a href="<?php echo e(route('home')); ?>">Dashboard</a>
                             </li>
+
                             <li class="list-group-item">
                                 <a href="<?php echo e(route('posts')); ?>">Posts</a>
                             </li>

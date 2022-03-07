@@ -3,16 +3,26 @@
         <div class="container">
             <div class="row">
                 <div class="subscribe scrollme">
+
                     <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
                         <h4 class="subscribe-title">Send letter</h4>
-                        <form class="subscribe-form" method="post" action="/subscribe">
-                            {{ csrf_field() }}
-                            <input class="email input-standard-grey input-white" name="email" placeholder="Your Email Address..." type="email">
-                            <button class="subscr-btn" type="submit">Send
-                                <span class="semicircle--right"></span>
-                            </button>
-                        </form>
-                        
+                      <!--Contact us-->
+                        {!! Form::open(['url' => 'contact/submit']) !!}
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            {{Form::text('name', '', ['class'=>'form-control', 'placeholder'=>'Enter your name'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::text('email', '', ['class'=>'form-control', 'placeholder'=>'Enter your email address'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::textarea('message', '', ['class'=>'form-control', 'placeholder'=>'Enter message'])}}
+                        </div>
+                        <div>
+                            {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+                        </div>
+                    {!! Form::close() !!}
+                        <!--/ Contact us-->
 
                     </div>
 
