@@ -102,7 +102,13 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
+
         $category = Category::find($id);
+
+        if ($category->posts->count()>0) {
+            Session::flash('info', 'ERROR! Category cannot be deleted because it has some posts!!!.');
+            return redirect()->back();
+        }
 
         foreach($category->posts as $post){
             $post->forceDelete();
