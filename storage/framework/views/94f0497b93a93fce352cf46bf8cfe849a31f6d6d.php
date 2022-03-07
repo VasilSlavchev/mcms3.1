@@ -56,7 +56,7 @@
                                           <div class="widget w-tags">
                                                 <div class="tags-wrap">
                                                       <?php $__currentLoopData = $post->tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                            <a href="#" class="w-tags-item"><?php echo e($tag->tag); ?></a>
+                                                            <a href="<?php echo e(route('tag.single', ['id' => $tag->id ])); ?>" class="w-tags-item"><?php echo e($tag->tag); ?></a>
                                                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                 </div>
                                           </div>
@@ -138,7 +138,7 @@
                               <?php echo $__env->make('includes.comments', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         </div>
 
-                        
+
 
 
                         </div>
@@ -175,4 +175,5 @@
       </div>
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts.frontend', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mcms3.1\resources\views/single.blade.php ENDPATH**/ ?>
