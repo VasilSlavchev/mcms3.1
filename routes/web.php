@@ -12,13 +12,14 @@ Route::get('/', [
 ]);
 
 Route::get('/results', function(){
-        $posts = \App\Post::where('title','like',  '%' . request('query') . '%')->get();
+    $posts = \App\Post::where('title','like',  '%' . request('query') . '%')->get();
 
-        return view('results')->with('posts', $posts)
-                              ->with('title', 'Search results : ' . request('query'))
-                              ->with('settings', \App\Setting::first())
-                              ->with('categories', \App\Category::take(5)->get())
-                              ->with('query', request('query'));
+    return view('results')->with('posts', $posts)
+        ->with('title', 'Search results : ' . request('query'))
+        ->with('settings', \App\Setting::first())
+        ->with('categories', \App\Category::take(5)->get())
+        ->with('pages', \App\Page::take(5)->get())
+        ->with('query', request('query'));
 });
 
 Route::get('/post/{slug}', [
@@ -130,35 +131,35 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as' => 'category.update'
     ]);
 
-Route::get('/page/create', [
-    'uses' => 'PagesController@create',
-    'as' => 'page.create'
-]);
+    Route::get('/page/create', [
+        'uses' => 'PagesController@create',
+        'as' => 'page.create'
+    ]);
 
-Route::get('/page', [
-    'uses' => 'PagesController@index',
-    'as' => 'pages'
-]);
+    Route::get('/page', [
+        'uses' => 'PagesController@index',
+        'as' => 'pages'
+    ]);
 
-Route::post('/page/store', [
-    'uses' => 'PagesController@store',
-    'as' => 'page.store'
-]);
+    Route::post('/page/store', [
+        'uses' => 'PagesController@store',
+        'as' => 'page.store'
+    ]);
 
-Route::get('/page/edit/{id}', [
-    'uses' => "PagesController@edit",
-    'as' => 'page.edit'
-]);
+    Route::get('/page/edit/{id}', [
+        'uses' => "PagesController@edit",
+        'as' => 'page.edit'
+    ]);
 
-Route::get('/page/delete/{id}', [
-    'uses' => "PagesController@destroy",
-    'as' => 'page.delete'
-]);
+    Route::get('/page/delete/{id}', [
+        'uses' => "PagesController@destroy",
+        'as' => 'page.delete'
+    ]);
 
-Route::post('/page/update/{id}', [
-    'uses' => 'PagesController@update',
-    'as' => 'page.update'
-]);
+    Route::post('/page/update/{id}', [
+        'uses' => 'PagesController@update',
+        'as' => 'page.update'
+    ]);
 
     Route::get('/tags', [
         'uses' => 'TagsController@index',
