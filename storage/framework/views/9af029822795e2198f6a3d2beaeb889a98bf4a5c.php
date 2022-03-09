@@ -72,7 +72,7 @@
                 <div class="left-side-wrapper">
                     <div class="single-blog blog-style-2 mb-60 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                         <div class="blog-img">
-                            <a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>"><img src="<?php echo e(asset( $third_post->featured)); ?>" alt="<?php echo e($first_post->title); ?>"></a>
+                            <a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>"><img src="<?php echo e(asset( $first_post->featured)); ?>" alt="<?php echo e($first_post->title); ?>"></a>
                         </div>
                         <div class="blog-content">
                             <h4><a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>"><?php echo e($first_post->title); ?></a></h4>
