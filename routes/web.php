@@ -101,6 +101,56 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as' => 'post.update'
     ]);
 
+    /*Portfolio*/
+
+
+    Route::get('/portfolio/create', [
+        'uses' => 'PortfoliosController@create',
+        'as' => 'portfolio.create'
+    ]);
+
+    Route::post('/portfolio/store', [
+        'uses' => 'PortfoliosController@store',
+        'as' => 'portfolio.store'
+    ]);
+
+    Route::get('/post/delete/{id}', [
+        'uses' => 'PostsController@destroy',
+        'as' => 'post.delete'
+    ]);
+
+    Route::get('/posts', [
+        'uses' => 'PostsController@index',
+        'as' => 'posts'
+    ]);
+
+    Route::get('/posts/trashed', [
+        'uses' => 'PostsController@trashed',
+        'as' => 'posts.trashed'
+    ]);
+
+    Route::get('/posts/kill/{id}', [
+        'uses' => 'PostsController@kill',
+        'as' => 'post.kill'
+    ]);
+
+    Route::get('/posts/restore/{id}', [
+        'uses' => 'PostsController@restore',
+        'as' => 'post.restore'
+    ]);
+
+    Route::get('/posts/edit/{id}', [
+        'uses' => 'PostsController@edit',
+        'as' => 'post.edit'
+    ]);
+
+    Route::post('/post/update/{id}', [
+        'uses' => 'PostsController@update',
+        'as' => 'post.update'
+    ]);
+
+    /*End of Portfolio*/
+
     Route::get('/category/create', [
         'uses' => 'CategoriesController@create',
         'as' => 'category.create'

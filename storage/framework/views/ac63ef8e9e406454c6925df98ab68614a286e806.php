@@ -110,6 +110,10 @@
                                 <a href="<?php echo e(route('tags')); ?>">Tags</a>
                             </li>
 
+                            <li class="list-group-item">
+                                <a href="<?php echo e(route('portfolio.create')); ?>">Create Portfolio item</a>
+                            </li>
+
                             <?php if(Auth::user()->admin): ?>
                                 <li class="list-group-item">
                                     <a href="<?php echo e(route('users')); ?>">Users</a>
