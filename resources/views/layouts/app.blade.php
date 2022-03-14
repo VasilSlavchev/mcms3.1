@@ -101,22 +101,21 @@
                                 <a href="{{ route('categories') }}">Categories</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="{{ route('pages') }}">Pages</a>
-                            </li>
-
-                            <li class="list-group-item">
                                 <a href="{{ route('tags') }}">Tags</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ route('pages') }}">Pages</a>
                             </li>
 
                             <li class="list-group-item">
                                 <a href="{{ route('portfolio.create') }}">Create Portfolio item</a>
                             </li>
+                            <li class="list-group-item">
+                                <a href="{{ route('portfolios') }}">All Portfolio items</a>
+                            </li>
 
                             <li class="list-group-item">
-                                <a href="{{ route('pfcategory.create') }}">Create new portfolio category</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{{ route('pfcategories') }}">Portfolio</a>
+                                <a href="{{ route('pfcategories') }}">Portfolio Categories</a>
                             </li>
 
                             @if(Auth::user()->admin)
@@ -138,6 +137,9 @@
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <a href="{{ route('posts.trashed') }}">All trashed posts</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ route('portfolios.trashed') }}">All trashed portfolio items</a>
                             </li>
                         </ul>
                     </div>

@@ -2,10 +2,6 @@
 
 
 
-Route::get('/test', function(){
-    return App\User::find(1)->profile;
-});
-
 Route::get('/', [
     'uses' => 'FrontEndController@index',
     'as' => 'index'
@@ -30,6 +26,16 @@ Route::get('/post/{slug}', [
 Route::get('/category/{id}', [
     'uses' => 'FrontEndController@category',
     'as' => 'category.single'
+]);
+
+Route::get('/portfolio/{id}', [
+    'uses' => 'FrontEndController@singlePost',
+    'as' => 'portfolio.single'
+]);
+
+Route::get('/portfolio/{id}', [
+    'uses' => 'FrontEndController@portfolio',
+    'as' => 'portfolio.single'
 ]);
 
 Route::get('/page/{id}', [
@@ -114,39 +120,39 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as' => 'portfolio.store'
     ]);
 
-    Route::get('/post/delete/{id}', [
-        'uses' => 'PostsController@destroy',
-        'as' => 'post.delete'
+    Route::get('/portfolio/delete/{id}', [
+        'uses' => 'PortfoliosController@destroy',
+        'as' => 'portfolio.delete'
     ]);
 
-    Route::get('/posts', [
-        'uses' => 'PostsController@index',
-        'as' => 'posts'
+    Route::get('/portfolios', [
+        'uses' => 'PortfoliosController@index',
+        'as' => 'portfolios'
     ]);
 
-    Route::get('/posts/trashed', [
-        'uses' => 'PostsController@trashed',
-        'as' => 'posts.trashed'
+    Route::get('/portfolios/trashed', [
+        'uses' => 'PortfoliosController@trashed',
+        'as' => 'portfolios.trashed'
     ]);
 
-    Route::get('/posts/kill/{id}', [
-        'uses' => 'PostsController@kill',
-        'as' => 'post.kill'
+    Route::get('/portfolios/kill/{id}', [
+        'uses' => 'PortfoliosController@kill',
+        'as' => 'portfolio.kill'
     ]);
 
-    Route::get('/posts/restore/{id}', [
-        'uses' => 'PostsController@restore',
-        'as' => 'post.restore'
+    Route::get('/portfolios/restore/{id}', [
+        'uses' => 'PortfoliosController@restore',
+        'as' => 'portfolio.restore'
     ]);
 
-    Route::get('/posts/edit/{id}', [
-        'uses' => 'PostsController@edit',
-        'as' => 'post.edit'
+    Route::get('/portfolios/edit/{id}', [
+        'uses' => 'PortfoliosController@edit',
+        'as' => 'portfolio.edit'
     ]);
 
-    Route::post('/post/update/{id}', [
-        'uses' => 'PostsController@update',
-        'as' => 'post.update'
+    Route::post('/portfolio/update/{id}', [
+        'uses' => 'PortfoliosController@update',
+        'as' => 'portfolio.update'
     ]);
 
     /*End of Portfolio*/

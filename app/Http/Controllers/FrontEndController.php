@@ -7,6 +7,7 @@ use App\Post;
 use App\Page;
 use App\Setting;
 use App\Category;
+use App\Pfcategory;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -16,6 +17,7 @@ class FrontEndController extends Controller
         return view('index')
                 ->with('title', Setting::first()->site_name)
                 ->with('categories', Category::take(5)->get())
+                ->with('pfcategories', Pfcategory::take(5)->get())
                 ->with('tags', Tag::all())
                 ->with('pages', Page::orderBy('position', 'asc')->take(5)->get())
                 ->with('first_post', Post::orderBy('created_at', 'desc')->first())
@@ -37,6 +39,7 @@ class FrontEndController extends Controller
                              ->with('title', $post->title)
                              ->with('settings', Setting::first())
                              ->with('categories', Category::take(5)->get())
+                            ->with('pfcategories', Pfcategory::take(1)->get())
                              ->with('pages', Page::take(5)->get())
                              ->with('next', Post::find($next_id))
                              ->with('prev', Post::find($prev_id))
@@ -45,6 +48,12 @@ class FrontEndController extends Controller
                              ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(10)->get()->first())
                              ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(10)->get()->first());
     }
+
+
+
+
+
+
 
 
     public function category($id)
@@ -58,6 +67,18 @@ class FrontEndController extends Controller
                                ->with('pages', Page::take(5)->get());
     }
 
+    public function portfolio($id)
+    {
+        $pfcategory = Pfcategory::find($id);
+
+        return view('pfcategory')->with('pfcategory', $pfcategory)
+           // ->with('title', $pfcategory->name)
+            ->with('settings', Setting::first())
+            ->with('pfcategories', Pfcategory::take(5)->get())
+            ->with('pages', Page::take(5)->get());
+    }
+
+
     public function page($id)
     {
         $page = Page::find($id);
@@ -68,6 +89,9 @@ class FrontEndController extends Controller
                                ->with('settings', Setting::first())
                                ->with('pages', Page::take(5)->get());
     }
+
+
+
 
 
 

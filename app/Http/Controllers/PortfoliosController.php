@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Pfcategory;
 use App\Portfolio;
+use Session;
 
 class PortfoliosController extends Controller
 {
@@ -16,7 +17,7 @@ class PortfoliosController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.portfolios.index')->with('portfolios', Portfolio::all());
     }
 
     /**
@@ -59,7 +60,6 @@ class PortfoliosController extends Controller
             'slug' => str_slug($request->title),
         ]);
 
-        $post->tags()->attach($request->tags);
 
         Session::flash('success', 'Portfolio item  created successfully.');
 
@@ -87,7 +87,10 @@ class PortfoliosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $portfolio = Portfolio::find($id);
+
+        return view('admin.portfolios.edit')->with('portfolio', $portfolio)
+            ->with('pfcategories', Pfcategory::all());
     }
 
     /**
@@ -99,7 +102,36 @@ class PortfoliosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'content' => 'required',
+            'pfcategory_id' => 'required'
+        ]);
+
+        $portfolio = Portfolio::find($id);
+
+        if($request->hasFile('featured'))
+        {
+            $featured = $request->featured;
+
+            $featured_new_name = time() . $featured->getClientOriginalName();
+
+            $featured->move('uploads/portfolio/', $featured_new_name);
+
+            $portfolio->featured = 'uploads/portfolio/'.$featured_new_name;
+
+        }
+
+        $portfolio->title = $request->title;
+        $portfolio->content = $request->content;
+        $portfolio->pfcategory_id = $request->pfcategory_id;
+
+        $portfolio->save();
+
+
+        Session::flash('success', 'Portfolio item updated successfully.');
+
+        return redirect()->route('portfolios');
     }
 
     /**
@@ -110,6 +142,40 @@ class PortfoliosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $portfolio = Portfolio::find($id);
+
+        $portfolio->delete();
+
+        Session::flash('success', 'The portfolio item was just trashed.');
+
+        return redirect()->back();
+    }
+
+    public function trashed() {
+        $portfolios = Portfolio::onlyTrashed()->get();
+
+        return view('admin.portfolios.trashed')->with('portfolios', $portfolios);
+    }
+
+    public function kill($id)
+    {
+        $portfolio = Portfolio::withTrashed()->where('id', $id)->first();
+
+        $portfolio->forceDelete();
+
+        Session::flash('success', 'Portfolio item deleted permanently.');
+
+        return redirect()->back();
+    }
+
+    public function restore($id)
+    {
+        $portfolio = Portfolio::withTrashed()->where('id', $id)->first();
+
+        $portfolio->restore();
+
+        Session::flash('success', 'Portfolio item restored successfully.');
+
+        return redirect()->route('portfolios');
     }
 }
