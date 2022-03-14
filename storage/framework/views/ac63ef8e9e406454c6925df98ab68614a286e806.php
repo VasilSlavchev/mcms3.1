@@ -114,6 +114,13 @@
                                 <a href="<?php echo e(route('portfolio.create')); ?>">Create Portfolio item</a>
                             </li>
 
+                            <li class="list-group-item">
+                                <a href="<?php echo e(route('pfcategory.create')); ?>">Create new portfolio category</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="<?php echo e(route('pfcategories')); ?>">Portfolio</a>
+                            </li>
+
                             <?php if(Auth::user()->admin): ?>
                                 <li class="list-group-item">
                                     <a href="<?php echo e(route('users')); ?>">Users</a>

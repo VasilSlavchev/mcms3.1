@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Pfcategory;
-use App\Portfolio;
 
-class PortfoliosController extends Controller
+class PfcategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class PortfoliosController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pfcategories.index')->with('pfcategories', Pfcategory::all());
     }
 
     /**
@@ -26,8 +26,7 @@ class PortfoliosController extends Controller
      */
     public function create()
     {
-        return view('admin.portfolios.create')->with('pfcategories', Pfcategory::all());
-
+        return view('admin.pfcategories.create');
     }
 
     /**
@@ -38,34 +37,14 @@ class PortfoliosController extends Controller
      */
     public function store(Request $request)
     {
-       $this->validate($request, [
-           'title'=>'required',
-           'featured'=>'required',
-           'content'=>'required',
-           'pfcategory_id'=>'required'
-       ]);
-
-        $featured = $request->featured;
-
-        $featured_new_name = time().$featured->getClientOriginalName();
-
-        $featured->move('uploads/portfolio', $featured_new_name);
-
-        $portfolio = Portfolio::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'featured' => 'uploads/portfolio/' . $featured_new_name,
-            'pfcategory_id' => $request->pfcategory_id,
-            'slug' => str_slug($request->title),
+        $this->validate($request, [
+            'name'=>'required'
         ]);
-
-        $post->tags()->attach($request->tags);
-
-        Session::flash('success', 'Portfolio item  created successfully.');
-
-
-        return redirect()->back();
-
+        $pfcategory=new Pfcategory;
+        $pfcategory->name=$request->name;
+        $pfcategory->save();
+        Session::flash('success', 'You successfully create the portfolio category.');
+        return redirect()->route('pfcategories');
     }
 
     /**
@@ -87,7 +66,9 @@ class PortfoliosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pfcategory = Pfcategory::find($id);
+
+        return view('admin.pfcategories.edit')->with('pfcategory', $pfcategory);
     }
 
     /**
@@ -99,7 +80,15 @@ class PortfoliosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pfcategory = Pfcategory::find($id);
+
+        $pfcategory->name = $request->name;
+
+        $pfcategory->save();
+
+        Session::flash('success', 'You successfully updated the portfolio category.');
+
+        return redirect()->route('pfcategories');
     }
 
     /**
@@ -110,6 +99,22 @@ class PortfoliosController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $pfcategory = Pfcategory::find($id);
+
+        if ($pfcategory->pfcategories->count()>0) {
+            Session::flash('info', 'ERROR! Category cannot be deleted because it has some portfolio items!!!.');
+            return redirect()->back();
+        }
+
+        foreach($pfcategory->portfolios as $portfolio){
+            $portfolio->forceDelete();
+        }
+
+        $pfcategory->delete();
+
+        Session::flash('success', 'You succesfully deleted the portfolio category.');
+
+        return redirect()->route('pfcategories');
     }
 }

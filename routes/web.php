@@ -151,6 +151,41 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     /*End of Portfolio*/
 
+    /*Portfolio categories*/
+
+    Route::get('/pfcategory/create', [
+        'uses' => 'PfcategoriesController@create',
+        'as' => 'pfcategory.create'
+    ]);
+
+    Route::get('/pfcategories', [
+        'uses' => 'PfcategoriesController@index',
+        'as' => 'pfcategories'
+    ]);
+
+    Route::post('/pfcategory/store', [
+        'uses' => 'PfcategoriesController@store',
+        'as' => 'pfcategory.store'
+    ]);
+
+    Route::get('/pfcategory/edit/{id}', [
+        'uses' => "PfcategoriesController@edit",
+        'as' => 'pfcategory.edit'
+    ]);
+
+    Route::get('/pfcategory/delete/{id}', [
+        'uses' => "PfcategoriesController@destroy",
+        'as' => 'pfcategory.delete'
+    ]);
+
+    Route::post('/pfcategory/update/{id}', [
+        'uses' => 'PfcategoriesController@update',
+        'as' => 'pfcategory.update'
+    ]);
+
+    /*End of portfolio categories*/
+
+
     Route::get('/category/create', [
         'uses' => 'CategoriesController@create',
         'as' => 'category.create'

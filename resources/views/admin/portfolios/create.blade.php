@@ -21,10 +21,10 @@
                     <input type="file" name="featured" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="category">Select a Category</label>
-                    <select name="category_id" id="category" class="form-control">
-                        @foreach($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    <label for="pfcategory">Select a portfolio category</label>
+                    <select name="pfcategory_id" id="pfcategory" class="form-control">
+                        @foreach($pfcategories as $pfcategory)
+                            <option value="{{ $pfcategory->id }}">{{ $pfcategory->name }}</option>
                         @endforeach
                     </select>
                 </div>

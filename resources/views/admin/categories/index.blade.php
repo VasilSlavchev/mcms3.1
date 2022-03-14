@@ -16,7 +16,7 @@
                                     Category name
                               </th>
                               <th>
-                                    Editing 
+                                    Editing
                               </th>
                               <th>
                                     Deleting
@@ -53,4 +53,4 @@
             </div>
       </div>
 
-@stop
+@endsection

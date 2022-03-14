@@ -76,7 +76,7 @@ class PostsController extends Controller
 
         $post->tags()->attach($request->tags);
 
-        Session::flash('success', 'Post created succesfully.');
+        Session::flash('success', 'Post created successfully.');
 
 
         return redirect()->back();
@@ -135,7 +135,7 @@ class PostsController extends Controller
             $featured->move('uploads/posts', $featured_new_name);
 
             $post->featured = 'uploads/posts/'.$featured_new_name;
-            
+
         }
 
         $post->title = $request->title;
@@ -170,14 +170,14 @@ class PostsController extends Controller
 
     public function trashed() {
         $posts = Post::onlyTrashed()->get();
-        
+
         return view('admin.posts.trashed')->with('posts', $posts);
     }
 
     public function kill($id)
     {
         $post = Post::withTrashed()->where('id', $id)->first();
-        
+
         $post->forceDelete();
 
         Session::flash('success', 'Post deleted permanently.');

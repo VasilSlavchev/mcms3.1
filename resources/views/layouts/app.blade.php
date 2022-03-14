@@ -112,6 +112,13 @@
                                 <a href="{{ route('portfolio.create') }}">Create Portfolio item</a>
                             </li>
 
+                            <li class="list-group-item">
+                                <a href="{{ route('pfcategory.create') }}">Create new portfolio category</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ route('pfcategories') }}">Portfolio</a>
+                            </li>
+
                             @if(Auth::user()->admin)
                                 <li class="list-group-item">
                                     <a href="{{ route('users') }}">Users</a>
