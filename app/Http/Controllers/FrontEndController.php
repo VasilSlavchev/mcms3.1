@@ -17,15 +17,11 @@ class FrontEndController extends Controller
         return view('index')
                 ->with('title', Setting::first()->site_name)
                 ->with('categories', Category::take(5)->get())
-                ->with('pfcategories', Pfcategory::take(5)->get())
+                ->with('pfcategories', Pfcategory::take(1)->get())
                 ->with('tags', Tag::all())
                 ->with('pages', Page::orderBy('position', 'asc')->take(5)->get())
-                ->with('first_post', Post::orderBy('created_at', 'desc')->first())
-                ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(10)->get()->first())
-                ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(10)->get()->first())
-                ->with('career', Category::find(2))
-                ->with('tutorials', Category::find(3))
-                ->with('settings', Setting::first());
+                ->with('settings', Setting::first())
+                ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(5));
     }
 
     public function singlePost($slug)
@@ -39,21 +35,12 @@ class FrontEndController extends Controller
                              ->with('title', $post->title)
                              ->with('settings', Setting::first())
                              ->with('categories', Category::take(5)->get())
-                            ->with('pfcategories', Pfcategory::take(1)->get())
+                             ->with('pfcategories', Pfcategory::take(1)->get())
                              ->with('pages', Page::take(5)->get())
                              ->with('next', Post::find($next_id))
                              ->with('prev', Post::find($prev_id))
-                             ->with('tags', Tag::all())
-                             ->with('first_post', Post::orderBy('created_at', 'desc')->first())
-                             ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(10)->get()->first())
-                             ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(10)->get()->first());
+                             ->with('tags', Tag::all());
     }
-
-
-
-
-
-
 
 
     public function category($id)
@@ -67,12 +54,12 @@ class FrontEndController extends Controller
                                ->with('pages', Page::take(5)->get());
     }
 
-    public function portfolio($id)
+    public function pfcategory($id)
     {
         $pfcategory = Pfcategory::find($id);
 
         return view('pfcategory')->with('pfcategory', $pfcategory)
-           // ->with('title', $pfcategory->name)
+            ->with('title', $pfcategory->name)
             ->with('settings', Setting::first())
             ->with('pfcategories', Pfcategory::take(5)->get())
             ->with('pages', Page::take(5)->get());
@@ -91,11 +78,6 @@ class FrontEndController extends Controller
     }
 
 
-
-
-
-
-
     public function tag($id)
     {
         $tag = Tag::find($id);
@@ -104,6 +86,6 @@ class FrontEndController extends Controller
                           ->with('title', $tag->tag)
                           ->with('settings', Setting::first())
                           ->with('categories', Category::take(5)->get())
-                         ->with('pages', Page::take(5)->get());
+                          ->with('pages', Page::take(5)->get());
     }
 }

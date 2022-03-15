@@ -22,21 +22,22 @@ Route::get('/post/{slug}', [
     'uses' => 'FrontEndController@singlePost',
     'as' => 'post.single'
 ]);
+Route::get('/portfolio/{slug}', [
+    'uses' => 'FrontEndController@singlePortfolio',
+    'as' => 'portfolio.single'
+]);
 
 Route::get('/category/{id}', [
     'uses' => 'FrontEndController@category',
     'as' => 'category.single'
 ]);
 
-Route::get('/portfolio/{id}', [
-    'uses' => 'FrontEndController@singlePost',
-    'as' => 'portfolio.single'
+Route::get('/portfolios/{id}', [
+    'uses' => 'FrontEndController@pfcategory',
+    'as' => 'pfcategory.single'
 ]);
 
-Route::get('/portfolio/{id}', [
-    'uses' => 'FrontEndController@portfolio',
-    'as' => 'portfolio.single'
-]);
+
 
 Route::get('/page/{id}', [
     'uses' => 'FrontEndController@page',

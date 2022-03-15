@@ -3,8 +3,7 @@
 <html class="no-js" lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $title }}</title>
-    <meta name="description" content="">
+    <title></title>    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png')}}">
     <link rel="stylesheet" href="{{ asset('app/css/bootstrap.min.css')}}">
@@ -43,18 +42,17 @@
 @include('includes.header')
 <!--/header-->
 
-
 <section class="page-banner-section pt-75 pb-75 img-bg" style="background-image: url({{ asset('app/img/bg/common-bg.jpg')}})">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="banner-content">
-                    <h2 class="text-white">Latest Blog</h2>
+
                     <div class="page-breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                <li class="breadcrumb-item" aria-current="page">Category </li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('pfcategory.single', ['id' => $portfolio->pfcategory->id ]) }}">{{$post->category->name}}</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -70,30 +68,37 @@
         <div class="row">
             <div class="col-xl-8 col-lg-7">
                 <div class="left-side-wrapper">
-
-                    @foreach($posts as $post)
                     <div class="single-blog blog-style-2 mb-60 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                         <div class="blog-img">
-                            <a href="{{ route('post.single', ['slug' => $post->slug ]) }}"><img src="{{asset( $post->featured)}}" alt="{{ $post->title }}"></a>
+                            <img src="{{asset( $portfolio->featured)}}" >
                         </div>
                         <div class="blog-content">
-                            <a href="{{ route('post.single', ['slug' => $post->slug ]) }}"><h4 class="case-item__title">{{ $post->title }}</h4></a>
-                            <div class="blog-meta">
-                                <a href="{{route('post.single', ['slug' => $post->slug ])}}" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
-                                <span class="date"><i class="lni lni-calendar"></i> {{ $post->created_at->toFormattedDateString() }}</span>
-                                <span class="category"><i class="lni lni-folder"></i>  <a href="{{ route('category.single', ['id' => $post->category->id ]) }}">{{ $post->category->name }}</a> </span>
-                            </div>
+
+
+
+                            <div class="actual_content">{!! $portfolio->content !!}</div>
+                        </div>
+
+                    </div>
+                    <div class="blog-details-author">
+
+                        <div class="blog-details-author-thumb">
+                            <img src="{{ asset($post->user->profile->avatar) }}" alt="Author">
+                        </div>
+
+
                         </div>
                     </div>
-                    @endforeach
+
+
+
 
 
                 </div>
             </div>
             @include('includes.sidebar')
-            {{$posts->links()}}
         </div>
-    </div>
+
 </section>
 
 
@@ -125,7 +130,7 @@
 <a href="#" class="scroll-top">
     <i class="lni lni-arrow-up"></i>
 </a>
-<script src="{{ asset('app/js/jquery-3.6.0.js')}}"></script>
+<script src="{{ asset('app/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{ asset('app/js/bootstrap.bundle-5.0.0-beta1.min.js')}}"></script>
 <script src="{{ asset('app/js/contact-form.js')}}"></script>
 <script src="{{ asset('app/js/count-up.min.js')}}"></script>
@@ -135,6 +140,13 @@
 <script src="{{ asset('app/js/wow.min.js')}}"></script>
 <script src="{{ asset('app/js/imagesloaded.min.js')}}"></script>
 <script src="{{ asset('app/js/main.js')}}"></script>
+<script src="{{ asset('js/toastr.min.js') }}"></script>
+
+<script>
+    @if(Session::has('subscribed'))
+    toastr.success("{{ Session::get('subscribed') }}");
+    @endif
+</script>
 </body>
 </html>
 

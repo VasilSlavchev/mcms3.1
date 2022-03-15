@@ -70,58 +70,29 @@
         <div class="row">
             <div class="col-xl-8 col-lg-7">
                 <div class="left-side-wrapper">
-                    <div class="single-blog blog-style-2 mb-60 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <div class="blog-img">
-                            <a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>"><img src="<?php echo e(asset( $first_post->featured)); ?>" alt="<?php echo e($first_post->title); ?>"></a>
-                        </div>
-                        <div class="blog-content">
-                            <h4><a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>"><?php echo e($first_post->title); ?></a></h4>
-                            <div class="blog-meta">
-                                <a href="<?php echo e(route('post.single', ['slug' => $first_post->slug ])); ?>" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
-                                <span class="date"><i class="lni lni-calendar"></i> <?php echo e($first_post->created_at->toFormattedDateString()); ?></span>
-                                <span class="category"><i class="lni lni-folder"></i>  <a href="<?php echo e(route('category.single', ['id' => $first_post->category->id ])); ?>"><?php echo e($first_post->category->name); ?></a> </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-blog blog-style-2 mb-60 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <div class="blog-img">
-                            <a href="<?php echo e(route('post.single', ['slug' => $second_post->slug ])); ?>"><img src="<?php echo e(asset( $second_post->featured)); ?>" alt="<?php echo e($second_post->title); ?>"></a>
-                        </div>
-                        <div class="blog-content">
-                            <h4><a href="<?php echo e(route('post.single', ['slug' => $second_post->slug ])); ?>"><?php echo e($second_post->title); ?></a></h4>
-                            <div class="blog-meta">
-                                <a href="<?php echo e(route('post.single', ['slug' => $second_post->slug ])); ?>" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
-                                <span class="date"><i class="lni lni-calendar"></i>  At: <?php echo e($first_post->created_at->toFormattedDateString()); ?></span>
-                                <span class="category"><i class="lni lni-folder"></i> In category: <a href="<?php echo e(route('category.single', ['id' => $second_post->category->id ])); ?>"><?php echo e($second_post->category->name); ?></a> </span>
 
-                            </div>
-                        </div>
-                    </div>
+                    <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="single-blog blog-style-2 mb-60 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                         <div class="blog-img">
-                            <a href="<?php echo e(route('post.single', ['slug' => $third_post->slug ])); ?>"><img src="<?php echo e(asset( $third_post->featured)); ?>" alt="<?php echo e($third_post->title); ?>"></a>
+                            <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><img src="<?php echo e(asset( $post->featured)); ?>" alt="<?php echo e($post->title); ?>"></a>
                         </div>
                         <div class="blog-content">
-                            <h4><a href="<?php echo e(route('post.single', ['slug' => $third_post->slug ])); ?>"><?php echo e($third_post->title); ?></a></h4>
+                            <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><h4 class="case-item__title"><?php echo e($post->title); ?></h4></a>
                             <div class="blog-meta">
-                                <a href="<?php echo e(route('post.single', ['slug' => $third_post->slug ])); ?>" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
-                                <span class="date"><i class="lni lni-calendar"></i>  At: <?php echo e($third_post->created_at->toFormattedDateString()); ?></span>
-                                <span class="category"><i class="lni lni-folder"></i> In category: <a href="<?php echo e(route('category.single', ['id' => $third_post->category->id ])); ?>"><?php echo e($third_post->category->name); ?></a> </span>
+                                <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
+                                <span class="date"><i class="lni lni-calendar"></i> <?php echo e($post->created_at->toFormattedDateString()); ?></span>
+                                <span class="category"><i class="lni lni-folder"></i>  <a href="<?php echo e(route('category.single', ['id' => $post->category->id ])); ?>"><?php echo e($post->category->name); ?></a> </span>
                             </div>
                         </div>
                     </div>
-                   <!-- <div class="pagination">
-                        <ul class="d-flex justify-content-center align-items-center">
-                            <li><a href="javascript:void(0)"><i class="lni lni-arrow-left"></i></a></li>
-                            <li><a href="javascript:void(0)">1</a></li>
-                            <li><a href="javascript:void(0)" class="active">2</a></li>
-                            <li><a href="javascript:void(0)">3</a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-arrow-right"></i></a></li>
-                        </ul>
-                    </div>-->
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
                 </div>
             </div>
             <?php echo $__env->make('includes.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <?php echo e($posts->links()); ?>
+
         </div>
     </div>
 </section>
@@ -165,13 +136,6 @@
 <script src="<?php echo e(asset('app/js/wow.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/imagesloaded.min.js')); ?>"></script>
 <script src="<?php echo e(asset('app/js/main.js')); ?>"></script>
-<script src="<?php echo e(asset('js/toastr.min.js')); ?>"></script>
-
-<script>
-    <?php if(Session::has('subscribed')): ?>
-    toastr.success("<?php echo e(Session::get('subscribed')); ?>");
-    <?php endif; ?>
-</script>
 </body>
 </html>
 

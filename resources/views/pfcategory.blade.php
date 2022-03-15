@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $title }}</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png')}}">
@@ -52,12 +52,12 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="banner-content">
-                    <h2 class="text-white">Portfolio group: {{ $pfcategory->name }}</h2>
+                    <h2 class="text-white">Category: </h2>
                     <div class="page-breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item" aria-current="page">Portfolio</li>
-                                <li class="breadcrumb-item active" aria-current="page">{{$pfcategory->name}}</li>
+                                <li class="breadcrumb-item" aria-current="page">Category</li>
+                                <li class="breadcrumb-item active" aria-current="page"></li>
                             </ol>
                         </nav>
                     </div>
@@ -72,23 +72,24 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-xl-12 col-lg-12">
+            <div class="col-xl-8 col-lg-7">
                 @foreach($pfcategory->portfolios as $portfolio)
                     <div class="left-side-wrapper">
                         <div class="single-blog blog-style-2 mb-60 wow fadeInUp" data-wow-delay=".2s"
                              style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                             <div class="blog-img">
-                                <a href="{{ route('portfolio.single', ['slug' => $portfolio->slug ]) }}">
-                                    <img src="{{asset( $portfolio->featured)}}" alt="{{ $portfolio->title }}">
+                                <a href="{{ route('portfolio.single', ['slug' => $post->slug ]) }}">
+                                    <img src="{{asset( $post->featured)}}" >
                                 </a>
                             </div>
                             <div class="blog-content">
 
                                 <div class="blog-meta">
-                                    <a href="{{ route('portfolio.single', ['slug' => $portfolio->slug ]) }}"><h6 class="case-item__title">{{ $portfolio->title }}</h6></a>
+                                    <a href="{{ route('portfolio.single', ['slug' => $portfolio->slug ]) }}"> </a>
                                     <span class="date"><i class="lni lni-calendar"></i> {{ $post->created_at->toFormattedDateString() }}</span>
                                     <span class="category"><i class="lni lni-folder"></i> <a
-                                            href="{{ route('pfcategory.single', ['id' => $pfcategory->id ]) }}">{{ $post->pfcategory->name }}</a> </span>
+                                            href="{{ route('category.single', ['id' => $category->id ]) }}">{{ $portfolio->pfcategory->name }}</a> </span>
+                                    <span class="category"><i class="lni lni-user"></i> {{ $post->user->name }} </span>
                                 </div>
 
 
@@ -101,7 +102,36 @@
                 @endforeach
             </div>
 
+            <div class="col-xl-4 col-lg-5">
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-box search-form-box mb-30">
+                        @include('includes.search')
+                    </div>
 
+                    <div class="sidebar-box catagories-box mb-30">
+                        <h4>Categories</h4>
+                        <ul>
+                            @foreach($categories as $category)
+                                <li>
+                                    <a href="{{ route('category.single', ['id' => $category->id ]) }}">{{ $category->name }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-box mb-30">
+                        <h4>Follow On</h4>
+                        <div class="footer-social-links">
+                            <ul class="d-flex justify-content-start">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
