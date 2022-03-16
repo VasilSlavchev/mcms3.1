@@ -17,7 +17,7 @@ class FrontEndController extends Controller
         return view('index')
                 ->with('title', Setting::first()->site_name)
                 ->with('categories', Category::take(5)->get())
-                ->with('pfcategories', Pfcategory::take(1)->get())
+                //->with('pfcategories', Pfcategory::take(1)->get())
                 ->with('tags', Tag::all())
                 ->with('pages', Page::orderBy('position', 'asc')->take(5)->get())
                 ->with('settings', Setting::first())
@@ -35,11 +35,12 @@ class FrontEndController extends Controller
                              ->with('title', $post->title)
                              ->with('settings', Setting::first())
                              ->with('categories', Category::take(5)->get())
-                             ->with('pfcategories', Pfcategory::take(1)->get())
+                             //->with('pfcategories', Pfcategory::take(1)->get())
                              ->with('pages', Page::take(5)->get())
                              ->with('next', Post::find($next_id))
                              ->with('prev', Post::find($prev_id))
-                             ->with('tags', Tag::all());
+                             ->with('tags', Tag::all())
+                             ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(5));
     }
 
 

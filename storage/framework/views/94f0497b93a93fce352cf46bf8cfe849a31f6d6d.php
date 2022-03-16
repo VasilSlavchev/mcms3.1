@@ -78,7 +78,7 @@
                             <div class="blog-meta">
 
                                 <span class="date"><i class="lni lni-calendar"></i> <?php echo e($post->created_at->toFormattedDateString()); ?></span>
-                                <span class="category"><i class="lni lni-folder"></i> <a href="<?php echo e(route('category.single', ['id' => $first_post->category->id ])); ?>"><?php echo e($post->category->name); ?></a> </span>
+                                <span class="category"><i class="lni lni-folder"></i> <a href="<?php echo e(route('category.single', ['id' => $post->category->id ])); ?>"><?php echo e($post->category->name); ?></a> </span>
                                 <span class="category"><i class="lni lni-user"></i> <?php echo e($post->user->name); ?> </span>
                             </div>
 
@@ -193,11 +193,6 @@
 <script src="<?php echo e(asset('app/js/main.js')); ?>"></script>
 <script src="<?php echo e(asset('js/toastr.min.js')); ?>"></script>
 
-<script>
-    <?php if(Session::has('subscribed')): ?>
-    toastr.success("<?php echo e(Session::get('subscribed')); ?>");
-    <?php endif; ?>
-</script>
 </body>
 </html>
 
