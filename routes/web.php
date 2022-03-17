@@ -1,11 +1,29 @@
 <?php
 
-
-
+// Public routes
 Route::get('/', [
     'uses' => 'FrontEndController@index',
     'as' => 'index'
 ]);
+
+Route::get('/login', [
+    'uses' => 'FrontEndController@index',
+    'as' => 'index'
+]);
+
+Route::get('/register', [
+    'uses' => 'FrontEndController@index',
+    'as' => 'index'
+]);
+
+// Route::post('/logout', function () {
+//     return \App\Http\Controllers\UsersController::logout();
+// });
+
+// In case guest tries to directly open logout route.
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/logout', "\App\Http\Controllers\UsersController@logout");
+});
 
 Route::get('/results', function(){
     $posts = \App\Post::where('title','like',  '%' . request('query') . '%')->get();
@@ -37,13 +55,10 @@ Route::get('/portfolios/{id}', [
     'as' => 'pfcategory.single'
 ]);
 
-
-
 Route::get('/page/{id}', [
     'uses' => 'FrontEndController@page',
     'as' => 'page.single'
 ]);
-
 
 Route::get('/tag/{id}', [
     'uses' => 'FrontEndController@tag',
@@ -54,9 +69,12 @@ Route::post('/contact/submit', 'MessagesController@submit');
 
 Auth::routes();
 
-
-
+// Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+
+    Route::get('/', function () {
+        return redirect()->intended('/admin/dashboard');
+    });
 
     Route::get('/dashboard', [
         'uses' => 'HomeController@index',
@@ -109,8 +127,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     ]);
 
     /*Portfolio*/
-
-
     Route::get('/portfolio/create', [
         'uses' => 'PortfoliosController@create',
         'as' => 'portfolio.create'
@@ -191,7 +207,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     ]);
 
     /*End of portfolio categories*/
-
 
     Route::get('/category/create', [
         'uses' => 'CategoriesController@create',
@@ -322,7 +337,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'uses' => 'ProfilesController@update',
         'as' => 'user.profile.update'
     ]);
-
 
     Route::get('/settings', [
         'uses' => 'SettingsController@index',

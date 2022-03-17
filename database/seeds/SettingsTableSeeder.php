@@ -20,7 +20,6 @@ class SettingsTableSeeder extends Seeder
             'footer_text1'=>'Mon - Fri 09:00 - 18:00',
             'footer_text2'=>'online support',
             'footer_text3'=>'Plovdiv, Blvd. XXXXXX'
-
         ]);
     }
 }
