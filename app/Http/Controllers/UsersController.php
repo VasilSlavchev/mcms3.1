@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Session;
 use App\User;
 use App\Profile;
@@ -140,5 +141,18 @@ class UsersController extends Controller
 
         return redirect()->back();
         
+    }
+
+    // Logout User.
+    public static function logout(Request $request) {
+
+        if (Auth::guest()) {
+            return redirect()->intended('/');
+        }
+
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->intended('/');
     }
 }
