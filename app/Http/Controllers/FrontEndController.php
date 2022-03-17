@@ -21,7 +21,7 @@ class FrontEndController extends Controller
                 ->with('tags', Tag::all())
                 ->with('pages', Page::orderBy('position', 'asc')->take(5)->get())
                 ->with('settings', Setting::first())
-                ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(5));
+                ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(4));
     }
 
     public function singlePost($slug)
@@ -40,7 +40,7 @@ class FrontEndController extends Controller
                              ->with('next', Post::find($next_id))
                              ->with('prev', Post::find($prev_id))
                              ->with('tags', Tag::all())
-                             ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(5));
+                             ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(4));
     }
 
 

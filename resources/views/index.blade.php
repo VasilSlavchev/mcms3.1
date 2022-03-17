@@ -77,21 +77,22 @@
                             <a href="{{ route('post.single', ['slug' => $post->slug ]) }}"><img src="{{asset( $post->featured)}}" alt="{{ $post->title }}"></a>
                         </div>
                         <div class="blog-content">
-                            <a href="{{ route('post.single', ['slug' => $post->slug ]) }}"><h4 class="case-item__title">{{ $post->title }}</h4></a>
+                            <a href="{{ route('post.single', ['slug' => $post->slug ]) }}"><h4 class="case-item__title">{{ $post->title }} </h4></a>
                             <div class="blog-meta">
-                                <a href="{{route('post.single', ['slug' => $post->slug ])}}" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
                                 <span class="date"><i class="lni lni-calendar"></i> {{ $post->created_at->toFormattedDateString() }}</span>
                                 <span class="category"><i class="lni lni-folder"></i>  <a href="{{ route('category.single', ['id' => $post->category->id ]) }}">{{ $post->category->name }}</a> </span>
+                                <span class="category"><i class="lni lni-user"></i> {{ $post->user->name }} </span>
                             </div>
-                        </div>
-                    </div>
-                    @endforeach
+                            {!! str_limit($post ->content, $limit = 200, $end = '...')!!}
+                         </div>
+                     </div>
+                     @endforeach
 
 
-                </div>
-            </div>
-            @include('includes.sidebar')
-            {{$posts->links()}}
+                 </div>
+             </div>
+             @include('includes.sidebar')
+             {{$posts->links()}}
         </div>
     </div>
 </section>

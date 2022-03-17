@@ -77,21 +77,23 @@
                             <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><img src="<?php echo e(asset( $post->featured)); ?>" alt="<?php echo e($post->title); ?>"></a>
                         </div>
                         <div class="blog-content">
-                            <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><h4 class="case-item__title"><?php echo e($post->title); ?></h4></a>
+                            <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>"><h4 class="case-item__title"><?php echo e($post->title); ?> </h4></a>
                             <div class="blog-meta">
-                                <a href="<?php echo e(route('post.single', ['slug' => $post->slug ])); ?>" class="read-more-btn">Read More <i class="lni lni-angle-double-right"></i></a>
                                 <span class="date"><i class="lni lni-calendar"></i> <?php echo e($post->created_at->toFormattedDateString()); ?></span>
                                 <span class="category"><i class="lni lni-folder"></i>  <a href="<?php echo e(route('category.single', ['id' => $post->category->id ])); ?>"><?php echo e($post->category->name); ?></a> </span>
+                                <span class="category"><i class="lni lni-user"></i> <?php echo e($post->user->name); ?> </span>
                             </div>
-                        </div>
-                    </div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php echo str_limit($post ->content, $limit = 200, $end = '...'); ?>
+
+                         </div>
+                     </div>
+                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
-                </div>
-            </div>
-            <?php echo $__env->make('includes.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <?php echo e($posts->links()); ?>
+                 </div>
+             </div>
+             <?php echo $__env->make('includes.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+             <?php echo e($posts->links()); ?>
 
         </div>
     </div>

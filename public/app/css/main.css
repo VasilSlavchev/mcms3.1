@@ -213,7 +213,7 @@ p {
   z-index: 5;
   transition: all .4s ease-in-out;
   border: none;
-  background: linear-gradient(to left, #18AB2B 0%, #6f58e8 50.39%, #3CB878 100%);
+  background: linear-gradient(to left, #3763eb 0%, #6f58e8 50.39%, #3763eb 100%);
   background-size: 200% auto;
   overflow: hidden;
 }
@@ -1621,11 +1621,12 @@ p {
   margin-bottom: 20px;
 }
 
-.blog-section .blog-style-2 .blog-content .blog-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.blog-meta {
+    margin-bottom: 15px;
+}
+
+.blog-section .blog-style-2 .blog-content .blog-meta span:not(:first-child) {
+  margin-left:20px;
 }
 
 .blog-section .blog-style-2 .blog-content .blog-meta .read-more-btn {
@@ -1690,6 +1691,7 @@ p {
 .blog-section .pagination {
   text-align: center;
   justify-content: center;
+  margin:80px 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1914,6 +1916,32 @@ p {
   font-size: 18px;
   color: #6A7C92;
 }
+.category a{
+  color: #6A7C92;
+  transition: all 0.4s ease-out 0s;
+}
+
+.category a:hover{
+  color: #3763EB;
+}
+.w-tags-item {
+  font-size: 18px;
+    padding: 12px 23px;
+    border-radius: 30px;
+    background: #EFF2F9;
+    color: #6A7C92;
+    transition: all 0.4s ease-out 0s;
+}
+.w-tags-item:hover{
+background: linear-gradient(#3763eb 0%, #6f58e8 100%);
+    color: #fff;
+}
+
+.blog-details-author-thumb img {
+  border-radius: 50%;
+  width: 190px;
+}
+
 
 .sidebar-wrapper .sidebar-box.tags-box ul {
   display: flex;
