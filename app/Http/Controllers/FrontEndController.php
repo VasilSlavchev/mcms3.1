@@ -32,27 +32,26 @@ class FrontEndController extends Controller
         $prev_id = Post::where('id', '<', $post->id)->max('id');
 
         return view('single')->with('post', $post)
-                             ->with('title', $post->title)
-                             ->with('settings', Setting::first())
-                             ->with('categories', Category::take(5)->get())
-                             //->with('pfcategories', Pfcategory::take(1)->get())
-                             ->with('pages', Page::take(5)->get())
-                             ->with('next', Post::find($next_id))
-                             ->with('prev', Post::find($prev_id))
-                             ->with('tags', Tag::all())
-                             ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(4));
+                            ->with('title', $post->title)
+                            ->with('settings', Setting::first())
+                            ->with('categories', Category::take(5)->get())
+                            //->with('pfcategories', Pfcategory::take(1)->get())
+                            ->with('pages', Page::take(5)->get())
+                            ->with('next', Post::find($next_id))
+                            ->with('prev', Post::find($prev_id))
+                            ->with('tags', Tag::all())
+                            ->with('posts', Post::orderBy('created_at', 'DESC')->paginate(4));
     }
-
 
     public function category($id)
     {
         $category = Category::find($id);
 
         return view('category')->with('category', $category)
-                               ->with('title', $category->name)
-                               ->with('settings', Setting::first())
-                               ->with('categories', Category::take(5)->get())
-                               ->with('pages', Page::take(5)->get());
+                            ->with('title', $category->name)
+                            ->with('settings', Setting::first())
+                            ->with('categories', Category::take(5)->get())
+                            ->with('pages', Page::take(5)->get());
     }
 
     public function pfcategory($id)
@@ -66,27 +65,25 @@ class FrontEndController extends Controller
             ->with('pages', Page::take(5)->get());
     }
 
-
     public function page($id)
     {
         $page = Page::find($id);
 
         return view('page')
         ->with('page', $page)
-                               ->with('name', $page->name)
-                               ->with('settings', Setting::first())
-                               ->with('pages', Page::take(5)->get());
+                            ->with('name', $page->name)
+                            ->with('settings', Setting::first())
+                            ->with('pages', Page::take(5)->get());
     }
-
 
     public function tag($id)
     {
         $tag = Tag::find($id);
 
         return view('tag')->with('tag', $tag)
-                          ->with('title', $tag->tag)
-                          ->with('settings', Setting::first())
-                          ->with('categories', Category::take(5)->get())
-                          ->with('pages', Page::take(5)->get());
+                        ->with('title', $tag->tag)
+                        ->with('settings', Setting::first())
+                        ->with('categories', Category::take(5)->get())
+                        ->with('pages', Page::take(5)->get());
     }
 }
